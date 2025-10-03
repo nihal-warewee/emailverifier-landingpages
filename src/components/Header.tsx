@@ -1,78 +1,75 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { Shield, Menu, X } from 'lucide-react';
+'use client';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const location = useLocation();
+import { useState } from 'react';
+import { Menu, X, Shield } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
-  const isActive = (path: string) => {
-    if (path === '/' && location.pathname === '/') return true;
-    if (path !== '/' && location.pathname.startsWith(path)) return true;
-    return false;
-  };
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Shield className="w-5 h-5 text-white" />
+          <div className="flex items-center space-x-2" onClick={() => window.location.href = '/'}>
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-2 rounded-lg">
+              <Shield className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-semibold text-gray-900">Email Verifier</span>
+            <span className="text-xl font-bold text-gray-900">Email Verifier</span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/features" className={`transition-colors ${isActive('/features') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Features</a>
-            <a href="/pricing" className={`transition-colors ${isActive('/pricing') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Pricing</a>
-            <a href="/api" className={`transition-colors ${isActive('/api') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>API</a>
-            <a href="/blog" className={`transition-colors ${isActive('/blog') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Blog</a>
-            <a href="/about" className={`transition-colors ${isActive('/about') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>About</a>
-            <a href="/contact" className={`transition-colors ${isActive('/contact') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Contact</a>
+            <a href="/features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
+            <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+            {/* <a href="/api-docs" className="text-gray-600 hover:text-blue-600 transition-colors">API</a> */}
+            <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
+            <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+            <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
           </nav>
 
-          {/* Auth Buttons */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-600 hover:text-gray-900 transition-colors">
-              Sign In
-            </button>
-            <button className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
-              Get Started
-            </button>
+            <Button variant="ghost" asChild>
+              <a href="https://app.emailverifier.io/signin">Sign In</a>
+            </Button>
+            <Button asChild>
+              <a href="https://app.emailverifier.io/register">Get Started</a>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
-            <div className="flex flex-col space-y-4">
-              <a href="/features" className={`${isActive('/features') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Features</a>
-              <a href="/pricing" className={`${isActive('/pricing') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Pricing</a>
-              <a href="/api" className={`${isActive('/api') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>API</a>
-              <a href="/blog" className={`${isActive('/blog') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Blog</a>
-              <a href="/about" className={`${isActive('/about') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>About</a>
-              <a href="/contact" className={`${isActive('/contact') ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'}`}>Contact</a>
-              <div className="pt-4 border-t border-gray-100">
-                <button className="text-gray-600 hover:text-gray-900 mb-2 block">Sign In</button>
-                <button className="bg-gray-900 text-white px-4 py-2 rounded-lg w-full">Get Started</button>
+            <nav className="flex flex-col space-y-4">
+              <a href="/features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
+              <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+              <a href="/api-docs" className="text-gray-600 hover:text-blue-600 transition-colors">API</a>
+              <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
+              <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+              <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+              <div className="flex flex-col space-y-2 pt-4">
+                <Button variant="ghost" className="justify-start" asChild>
+                  <a href="/signin">Sign In</a>
+                </Button>
+                <Button className="justify-start" asChild>
+                  <a href="/register">Get Started</a>
+                </Button>
               </div>
-            </div>
+            </nav>
           </div>
         )}
       </div>
     </header>
   );
-};
-
-export default Header;
+}

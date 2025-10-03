@@ -1,128 +1,115 @@
-import React, { useState } from 'react';
-import { CheckCircle, Mail, ArrowRight } from 'lucide-react';
+'use client';
 
-const Hero = () => {
+import { useState } from 'react';
+import { CheckCircle, Mail, ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Card } from './ui/card';
+
+export default function Hero() {
   const [email, setEmail] = useState('');
   const [isVerifying, setIsVerifying] = useState(false);
 
-  const handleVerify = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleVerify = async () => {
     if (!email) return;
-    
     setIsVerifying(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsVerifying(false);
-      alert('Email verification complete! (This is a demo)');
-    }, 2000);
+    // Simulate verification
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsVerifying(false);
   };
 
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 lg:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div>
-            {/* Accuracy Badge */}
-            <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full mb-8">
-              <CheckCircle className="w-4 h-4" />
-              <span className="text-sm font-medium">99.9% Accuracy Guaranteed</span>
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              99.9% Accuracy Guaranteed
             </div>
-
-            {/* Main Heading */}
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Verify Email Addresses{' '}
-              <span className="text-blue-600">Instantly</span>
+            
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Verify Email Addresses
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent block">
+                Instantly
+              </span>
             </h1>
-
-            {/* Description */}
+            
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Reduce bounce rates by up to 98% with our advanced email validation service. 
               Protect your sender reputation and improve deliverability with real-time verification.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2">
-                <span>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                View Pricing
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button size="lg" className="text-lg px-8 py-3" asChild>
+                <a href="/register">
+                  Start Free Trial
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3" asChild>
+                <a href="/pricing">View Pricing</a>
+              </Button>
             </div>
 
-            {/* Features */}
-            <div className="flex flex-wrap gap-6 text-sm text-gray-600">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>No Setup Required</span>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                No Setup Required
               </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>API Integration</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                API Integration
               </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span>GDPR Compliant</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                GDPR Compliant
               </div>
             </div>
           </div>
 
-          {/* Right Content - Verification Form */}
-          <div className="lg:pl-12">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              {/* Bounce Reduction Badge */}
-              <div className="absolute -top-4 right-8 bg-green-500 text-white px-4 py-2 rounded-lg font-semibold">
-                98% Bounce Reduction
+          {/* Right Content - Demo */}
+          <div className="relative">
+            <Card className="p-8 shadow-2xl bg-white/80 backdrop-blur-sm border-0">
+              <div className="text-center mb-6">
+                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Try it Free</h3>
+                <p className="text-gray-600">Verify an email address instantly</p>
               </div>
 
-              {/* Email Icon */}
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Mail className="w-8 h-8 text-blue-600" />
-                </div>
-              </div>
-
-              {/* Form Title */}
-              <h3 className="text-2xl font-bold text-gray-900 text-center mb-2">
-                Try it Free
-              </h3>
-              <p className="text-gray-600 text-center mb-8">
-                Verify an email address instantly
-              </p>
-
-              {/* Verification Form */}
-              <form onSubmit={handleVerify} className="space-y-4">
-                <div className="relative">
-                  <input
+              <div className="space-y-4">
+                <div className="flex gap-2">
+                  <Input
                     type="email"
+                    placeholder="Enter email address..."
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter email address..."
-                    className="w-full px-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-lg"
-                    required
+                    className="flex-1"
                   />
+                  <Button 
+                    onClick={handleVerify}
+                    disabled={isVerifying || !email}
+                    className="px-6"
+                  >
+                    {isVerifying ? 'Verifying...' : 'Verify'}
+                  </Button>
                 </div>
-                <button
-                  type="submit"
-                  disabled={isVerifying}
-                  className="w-full bg-gray-600 text-white py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isVerifying ? 'Verifying...' : 'Verify'}
-                </button>
-              </form>
 
-              {/* Form Footer */}
-              <p className="text-center text-sm text-gray-500 mt-4">
-                No registration required • Instant results
-              </p>
+                <div className="text-xs text-gray-500 text-center">
+                  No registration required • Instant results
+                </div>
+              </div>
+            </Card>
+
+            {/* Floating Stats */}
+            <div className="absolute -top-4 -right-4 bg-green-500 text-white p-3 rounded-lg shadow-lg">
+              <div className="text-2xl font-bold">98%</div>
+              <div className="text-xs opacity-90">Bounce Reduction</div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

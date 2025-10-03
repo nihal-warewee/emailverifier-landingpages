@@ -1,72 +1,70 @@
-import React from 'react';
-import { Shield, Zap, Globe, BarChart3, Lock, CheckCircle } from 'lucide-react';
+import { Shield, Zap, Globe, BarChart3, Lock, Cpu } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
-const Features = () => {
-  const features = [
-    {
-      icon: Shield,
-      title: '99.9% Accuracy',
-      description: 'Industry-leading accuracy with advanced validation algorithms and real-time verification.'
-    },
-    {
-      icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Verify emails in milliseconds with our optimized global infrastructure.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Coverage',
-      description: 'Support for all international email providers and domains worldwide.'
-    },
-    {
-      icon: BarChart3,
-      title: 'Detailed Analytics',
-      description: 'Comprehensive reports and insights to optimize your email campaigns.'
-    },
-    {
-      icon: Lock,
-      title: 'Secure & Private',
-      description: 'GDPR compliant with enterprise-grade security and data protection.'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Easy Integration',
-      description: 'Simple REST API with SDKs for all major programming languages.'
-    }
-  ];
+const features = [
+  {
+    icon: Shield,
+    title: 'Advanced Validation',
+    description: 'Multi-layer verification including syntax, domain, and mailbox validation with 99.9% accuracy.',
+  },
+  {
+    icon: Zap,
+    title: 'Real-time Processing',
+    description: 'Instant email verification with response times under 100ms for optimal user experience.',
+  },
+  {
+    icon: Globe,
+    title: 'Global Coverage',
+    description: 'Verify emails from any country with support for international domains and formats.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Detailed Analytics',
+    description: 'Comprehensive reports and insights to track your email list quality and performance.',
+  },
+  {
+    icon: Lock,
+    title: 'GDPR Compliant',
+    description: 'Fully compliant with data protection regulations. Your data is secure and private.',
+  },
+  {
+    icon: Cpu,
+    title: 'API Integration',
+    description: 'Easy-to-use REST API with comprehensive documentation and SDKs for popular languages.',
+  },
+];
 
+export default function Features() {
   return (
     <section id="features" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Our Email Verifier?
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Powerful Email Verification Features
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Powerful features designed to help you maintain clean email lists and improve deliverability rates.
+            Everything you need to maintain a clean, high-quality email list and improve your delivery rates.
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="p-6 rounded-xl hover:bg-gray-50 transition-colors group">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
-                <feature.icon className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
-            </div>
+            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-8">
+                <div className="bg-gradient-to-r from-blue-100 to-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Features;
+}

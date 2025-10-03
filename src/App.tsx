@@ -13,14 +13,25 @@ import APIPage from './pages/API';
 import BlogPage from './pages/Blog';
 import AboutPage from './pages/About';
 import ContactPage from './pages/Contact';
+import CTA from './components/CTA';
+import HowItWorks from './components/HowItWorks';
+import Testimonials from './components/Testimonials';
 
 // Home page component
 const HomePage = () => (
-  <>
-    <Hero />
-    <Features />
-    <Pricing />
-  </>
+  <main className="min-h-screen">
+  
+  <Hero />
+  <Features />
+  <HowItWorks />
+  <Pricing />
+  <Testimonials />
+  <CTA />
+  
+</main>
+
+
+
 );
 
 function App() {
