@@ -49,8 +49,8 @@ export default function Features() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <CardContent className="p-8">
+            <Card key={index} className="border-0 shadow-lg hover:shadow-softer transition-all duration-300 group">
+              <CardContent className='pt-6'>
                 <div className="bg-gradient-to-r from-blue-100 to-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
