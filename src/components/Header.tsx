@@ -31,10 +31,12 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" asChild>
+            <Button className='bg-blue-50 hover:bg-blue-100 px-2.5 py-2
+            transition-colors duration-300 ease-in' variant="ghost" asChild>
               <a href="https://app.emailverifier.io/signin">Sign In</a>
             </Button>
-            <Button asChild>
+            <Button className='bg-blue-500 hover:bg-blue-600 text-white px-2.5 py-2
+            transition-colors duration-300 ease-in' asChild>
               <a href="https://app.emailverifier.io/register">Get Started</a>
             </Button>
           </div>

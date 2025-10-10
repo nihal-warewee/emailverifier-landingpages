@@ -38,21 +38,22 @@ export default function HowItWorks() {
 
         <div className="relative">
           {/* Connection Lines */}
-          <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
-          
+          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {steps.map((step, index) => (
               <div key={index} className="text-center relative">
                 <div className="bg-white w-20 h-20 rounded-full shadow-lg flex items-center justify-center mx-auto mb-6 relative z-10 group hover:scale-110 transition-transform duration-300">
                   <step.icon className="w-10 h-10 text-blue-600" />
                 </div>
-                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold z-20">
-                  {index + 1}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 lg:mt-10 mb-3
+                flex items-center gap-3 justify-center">
+                  <span className=" bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
+                    {index + 1}
+                  </span>
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed max-w-72 lg:w-auto mx-auto">
                   {step.description}
                 </p>
               </div>

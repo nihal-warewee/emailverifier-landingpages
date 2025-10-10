@@ -28,27 +28,27 @@ export default function Hero() {
               <CheckCircle className="w-4 h-4 mr-2" />
               99.9% Accuracy Guaranteed
             </div>
-            
+
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Verify Email Addresses
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent block">
                 Instantly
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Reduce bounce rates by up to 98% with our advanced email validation service. 
+              Reduce bounce rates by up to 98% with our advanced email validation service.
               Protect your sender reputation and improve deliverability with real-time verification.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="text-lg px-8 py-3" asChild>
+              <Button size="lg" className="text-lg px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-300 ease-in" asChild>
                 <a href="/register">
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border hover:border-blue-600 transition-colors duration-300 ease-in" asChild>
                 <a href="/pricing">View Pricing</a>
               </Button>
             </div>
@@ -71,7 +71,7 @@ export default function Hero() {
 
           {/* Right Content - Demo */}
           <div className="relative">
-            <Card className="p-8 shadow-2xl bg-white/80 backdrop-blur-sm border-0">
+            <Card className="p-8 shadow-softer bg-white/80 backdrop-blur-sm border-0">
               <div className="text-center mb-6">
                 <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Try it Free</h3>
@@ -87,7 +87,7 @@ export default function Hero() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-1"
                   />
-                  <Button 
+                  <Button
                     onClick={handleVerify}
                     disabled={isVerifying || !email}
                     className="px-6"

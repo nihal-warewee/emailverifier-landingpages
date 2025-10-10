@@ -15,13 +15,16 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3" asChild>
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-100 text-lg px-8 py-3
+            transition-colors duration-300 ease-in" asChild>
               <a href="/register">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3" asChild>
+            <Button size="lg"
+            className="border-white border-2 hover:bg-blue-500 hover:border-blue-400 text-white text-lg px-8 py-3
+            transition-colors duration-300 ease-in" asChild>
               <a href="/contact">Schedule Demo</a>
             </Button>
           </div>
