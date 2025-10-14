@@ -50,13 +50,13 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${
+              className={`lg:max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-7 ${
                 index % 2 !== 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
-              <div className="w-full md:w-1/2 h-80 relative shadow-softer rounded-lg">
+              <div className="w-full h-80 relative shadow-[-2px_5px_10px_rgba(0,0,0,0.2)] rounded-lg">
                 <div
-                  className={`absolute bg-blue-100/50 p-4 rounded-lg z-10 ${
+                  className={`absolute bg-blue-200/80 p-4 rounded-lg z-10 ${
                     index % 2 !== 0 ? 'top-0 right-0' : 'top-0 left-0'
                   }`}
                 >
@@ -71,11 +71,11 @@ export default function Features() {
                 ></div>
               </div>
 
-              <div className="w-full md:w-1/2">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <div className="w-full">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-1">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-500 leading-relaxed text-ms">
                   {feature.description}
                 </p>
               </div>

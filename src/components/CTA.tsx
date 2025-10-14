@@ -16,24 +16,24 @@ export default function CTA() {
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white">
-          <h2 className="text-3xl lg:text-4xl font-semibold mb-4">
+          <h2 className="text-3xl lg:text-5xl font-semibold mb-5">
             Ready to Improve Your <span className='text-blue-600'>Email Deliverability?</span>
           </h2>
-          <p className="text-lg text-blue-50 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-50 mb-12 max-w-3xl mx-auto">
             Join thousands of businesses using Email Verifier to maintain clean email lists
             and achieve better campaign results.
           </p>
 
           <div className="flex flex-col gap-4 items-center *:w-full *:max-w-xs mb-8">
-            <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-lg px-8 py-3
-            transition-opacity duration-300 ease-in" asChild>
+            <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-xl px-8 py-3
+            transition-opacity duration-300 ease-in font-normal" asChild>
               <a href="/register">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
             <Button size="lg"
-              className="bg-white hover:bg-blue-50 text-blue-600 text-lg px-8 py-3
+              className="bg-white hover:bg-blue-100 text-blue-800 font-medium text-xl px-8 py-3
             transition-colors duration-300 ease-in" asChild>
               <a href="/contact">Schedule Demo</a>
             </Button>

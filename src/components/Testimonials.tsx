@@ -31,9 +31,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-20 bg-blue-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-2xl lg:text-3xl font-bold text-black mb-4">
             Trusted by Thousands of Businesses
           </h2>
@@ -42,17 +42,17 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white rounded-xl shadow-lg shadow-blue-900/10 pt-6">
-              <CardContent className="p-8 flex flex-col h-full">
-                <div className="flex-shrink-0 mb-6">
-                  <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center">
-                    <Quote className="w-6 h-6 text-blue-100 scale-x-[-1]" />
+            <Card key={index} className="bg-white rounded-xl shadow-[0_0_10px_rgba(0,100,255,0.2)]">
+              <CardContent className="p-5 pt-5 flex flex-col h-full">
+                <div className="flex-shrink-0 mb-4">
+                  <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center">
+                    <Quote className="w-5 h-5 text-blue-100 scale-x-[-1]" />
                   </div>
                 </div>
                 
-                <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
+                <p className="text-gray-900 font-[500] leading-relaxed mb-3 flex-grow">
                   "{testimonial.content}"
                 </p>
                 
@@ -63,7 +63,7 @@ export default function Testimonials() {
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full object-cover mr-4"
                     />
-                    <div>
+                    <div className='leading-tight'>
                       <div className="font-semibold text-gray-900">{testimonial.name}</div>
                       <div className="text-sm text-gray-600">{testimonial.title}</div>
                       <div className="text-sm text-blue-600 font-medium">{testimonial.company}</div>

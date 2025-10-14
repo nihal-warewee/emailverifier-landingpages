@@ -23,7 +23,7 @@ export default function LogoCloud() {
   return (
     <section className="py-12 md:py-20 bg-gray-50 overflow-hidden relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+        <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900">
           Integrate with Trusted Platforms
         </h2>
       </div>
