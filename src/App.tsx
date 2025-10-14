@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Pricing from './components/Pricing';
+// import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 
 // Import page components
@@ -16,15 +16,17 @@ import ContactPage from './pages/Contact';
 import CTA from './components/CTA';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
+import LogoCloud from './components/LogoCloud';
 
 // Home page component
 const HomePage = () => (
   <main className="min-h-screen">
   
   <Hero />
-  <Features />
   <HowItWorks />
-  <Pricing />
+  <Features />
+  <LogoCloud />
+  {/* <Pricing /> */}
   <Testimonials />
   <CTA />
   

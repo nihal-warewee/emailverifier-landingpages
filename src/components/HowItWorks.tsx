@@ -1,66 +1,82 @@
-import { Upload, Cog, CheckCircle, Download } from 'lucide-react';
+import { FileUp, ShieldCheck, LineChart, FileDown } from 'lucide-react';
 
-const steps = [
+// Data array now holds the icon component itself for more flexibility
+const processSteps = [
   {
-    icon: Upload,
+    number: '01',
+    icon: FileUp,
     title: 'Upload Your List',
     description: 'Upload your email list via our web interface, API, or integrate directly with your application.',
   },
   {
-    icon: Cog,
+    number: '02',
+    icon: ShieldCheck,
     title: 'Real-time Verification',
     description: 'Our advanced algorithms verify each email through multiple validation layers instantly.',
   },
   {
-    icon: CheckCircle,
+    number: '03',
+    icon: LineChart,
     title: 'Get Results',
     description: 'Receive detailed results with status codes, risk levels, and actionable insights.',
   },
   {
-    icon: Download,
+    number: '04',
+    icon: FileDown,
     title: 'Download Clean List',
     description: 'Export your verified, clean email list and improve your campaign performance.',
   },
 ];
 
-export default function HowItWorks() {
+const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+    <section className="bg-blue-50 py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             How Email Verification Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg leading-8 text-gray-600">
             Our simple 4-step process ensures maximum accuracy and efficiency for your email validation needs.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Connection Lines */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            {steps.map((step, index) => (
-              <div key={index} className="text-center relative">
-                <div className="bg-white w-20 h-20 rounded-full shadow-lg flex items-center justify-center mx-auto mb-6 relative z-10 group hover:scale-110 transition-transform duration-300">
-                  <step.icon className="w-10 h-10 text-blue-600" />
+        {/* Steps Grid */}
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          {processSteps.map((step) => {
+      
+            const IconComponent = step.icon;
+            
+            return (
+              <div
+                key={step.number}
+              
+                className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200/50 hover:shadow-md"
+              >
+               
+                <IconComponent 
+                  className="absolute -right-8 -top-8 h-32 w-32 text-blue-50" 
+                  strokeWidth={1.5} 
+                />
+                
+                {/* Card Content */}
+                <div className="relative">
+                  <p className="text-5xl font-bold text-blue-600">{step.number}</p>
+                  <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-base leading-7 text-gray-600">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 lg:mt-10 mb-3
-                flex items-center gap-3 justify-center">
-                  <span className=" bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
-                    {index + 1}
-                  </span>
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed max-w-72 lg:w-auto mx-auto">
-                  {step.description}
-                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default HowItWorks;
