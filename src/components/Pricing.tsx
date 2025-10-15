@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Check, Rocket, Gem, MinusIcon, PlusIcon } from 'lucide-react';
+import { MinusIcon, PlusIcon } from 'lucide-react';
 
 // Helper to format numbers with commas
 const numberFormatter = new Intl.NumberFormat('en-US');
