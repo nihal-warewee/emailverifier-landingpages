@@ -25,8 +25,8 @@ const HomePage = () => (
   <Hero />
   <HowItWorks />
   <Features />
-  <LogoCloud />
   <Pricing />
+  <LogoCloud />
   <Testimonials />
   <CTA />
   
