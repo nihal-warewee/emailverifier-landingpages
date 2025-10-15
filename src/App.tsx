@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
-// import Pricing from './components/Pricing';
+import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 
 // Import page components
@@ -25,8 +25,8 @@ const HomePage = () => (
   <Hero />
   <HowItWorks />
   <Features />
+  <Pricing />
   <LogoCloud />
-  {/* <Pricing /> */}
   <Testimonials />
   <CTA />
   
