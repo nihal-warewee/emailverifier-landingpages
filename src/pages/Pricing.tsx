@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {  MinusIcon, PlusIcon } from 'lucide-react';
+import { MinusIcon, PlusIcon } from 'lucide-react';
 
 // Helper to format numbers with commas
 const numberFormatter = new Intl.NumberFormat('en-US');
@@ -47,38 +46,39 @@ export default function Pricing() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
-          <h2 className="text-3xl font-semibold text-gray-900 lg:text-4xl">
+          <h2 className="text-2xl font-semibold text-gray-900 lg:text-4xl">
             Smart Email Verification Pricing
           </h2>
-          <p className="mt-3 text-2xl text-gray-900">
+          <p className="mt-3 lg:text-2xl text-gray-900">
             Choose your volume, see instant pricing. No surprises.
           </p>
         </div>
 
         {/* Calculator Card */}
-        <div className="mt-12 max-w-7xl mx-auto bg-white rounded-xl py-10 px-16">
+        <div className="mt-12 max-w-7xl mx-auto bg-white rounded-xl p-4 lg:py-10 lg:px-16">
           <label htmlFor="email-volume" className=" text-gray-800 text-xl">
             Email Volume
           </label>
-          <div className="mt-5 flex items-center gap-2 sm:gap-4">
+          <div className="mt-5 flex flex-wrap lg:flex-nowrap lg:items-center gap-2 sm:gap-4">
             <button
-              className="h-12 w-12 sm:w-20 border border-gray-600 bg-blue-50
+              className="h-12 w-11 lg:w-20 border border-gray-600 bg-blue-50
                text-2xl grid place-items-center rounded-md"
               onClick={decreaseVolume}><MinusIcon /></button>
-            <Input
+            <input
               id="email-volume"
               type="text"
               readOnly
               value={numberFormatter.format(volume)}
-              className="h-12 text-center text-xl font-semibold border-gray-600 focus-visible:ring-0 "
+              className="h-12 w-auto lg:w-full flex-1 text-center text-xl font-semibold border-gray-600 
+              focus-visible:ring-0 border rounded-md"
             />
             <button
-              className="h-12 w-12 sm:w-20 border border-gray-600 bg-blue-50
+              className="h-12 w-11 lg:w-20 border border-gray-600 bg-blue-50
               text-2xl grid place-items-center rounded-md"
               onClick={increaseVolume}><PlusIcon /></button>
-            <Button className="h-12 px-6 sm:px-12 text-base sm:text-lg 
+            <Button className="h-12 flex-1 md:flex-none px-6 md:px-16 text-base sm:text-lg 
             bg-gradient-to-r from-blue-600 to-blue-800 hover:bg-blue-700 text-white
-            ml-8">Calculate</Button>
+            lg:ml-8">Calculate</Button>
           </div>
 
           {/* Custom Range Slider with progress fill */}
@@ -110,7 +110,7 @@ export default function Pricing() {
           </div>
 
           {/* Preset Buttons */}
-          <div className="mt-6 flex flex-wrap justify-center gap-8">
+          <div className="mt-6 flex flex-wrap justify-center gap-4 lg:gap-8">
             {PRESETS.map((preset) => (
               <button
                 key={preset}
@@ -129,9 +129,9 @@ export default function Pricing() {
         {/* ---- Pricing Cards Section ---- */}
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           {/* Card 1: One-Time Purchase */}
-          <div className="bg-white shadow-lg h-full flex flex-col">
+          <div className="bg-white shadow-sm h-full flex flex-col">
             <div className="flex-grow">
-              <div className='px-8 pt-8 pb-4'>
+              <div className='px-8 pt-8 pb-4 border-b border-gray-300 shadow-sm'>
                 <span className="inline-flex gap-2 items-center px-3 py-1 text-xs font-semibold text-blue-900 bg-blue-100 rounded-full">
                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.945068 5.25296C0.946943 5.30358 0.967568 5.35233 1.00132 5.38983L5.86882 10.4092C5.89694 10.4373 5.93444 10.4542 5.97382 10.458H6.03007C6.06944 10.4523 6.10507 10.4355 6.13319 10.4092L11.0007 5.38983C11.0363 5.35233 11.0588 5.30546 11.0644 5.25296L6.05069 4.29858L0.945068 5.25296Z" fill="#1F5DD8" />
@@ -262,7 +262,7 @@ export default function Pricing() {
           </div>
 
           {/* Card 2: Monthly Subscription (Highlighted) */}
-          <div className="bg-white shadow-lg h-full flex flex-col">
+          <div className="bg-white shadow-sm h-full flex flex-col">
             <div className="flex-grow">
               <div className='px-8 pt-8 pb-4 bg-gradient-to-r from-black to-blue-700'>
                 <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold text-white bg-white/30 rounded-full">
