@@ -11,23 +11,23 @@ const features = [
   },
   {
     icon: Zap,
-    title: 'Real-time Processing',
+    title: 'Spam Trap Detection',
     description:
-      'Instant email verification with response times under 100ms for optimal user experience.',
+      'Detects and removes spam traps to protect your sender reputation and ensure safe email delivery.',
     card: "/assets/featuresCard/FeatureThreat.svg",
   },
   {
     icon: Globe,
-    title: 'Global Coverage',
+    title: 'Disposable Email Check',
     description:
-      'Verify emails from any country with support for international domains and formats.',
+      'Identifies temporary or one-time use emails to keep your mailing list clean and reliable.',
     card: "/assets/featuresCard/FeatureDisposable.svg",
   },
   {
     icon: BarChart3,
-    title: 'Detailed Analytics',
+    title: 'Catch All Email Check',
     description:
-      'Comprehensive reports and insights to track your email list quality and performance.',
+      'Detects domains that accept all emails, helping you avoid risky or unverifiable addresses.',
     card: "/assets/featuresCard/FeatureCatchAll.svg",
   },
   {
