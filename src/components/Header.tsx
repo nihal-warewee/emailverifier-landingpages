@@ -20,8 +20,8 @@ export default function Header() {
                 <path d="M19.1835 17.1672L15.4479 9.29176H9.99561L19.1835 22.8214L34.7326 0.204651H24.8377L19.1835 17.1672Z" fill="url(#paint0_linear_189_1441)" />
                 <defs>
                   <linearGradient id="paint0_linear_189_1441" x1="22.3641" y1="0.204651" x2="22.3641" y2="22.8214" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2563EB" />
-                    <stop offset="1" stop-color="#1B4297" />
+                    <stop stopColor="#2563EB" />
+                    <stop offset="1" stopColor="#1B4297" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -81,10 +81,10 @@ export default function Header() {
               <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start" asChild>
-                  <a href="/signin">Sign In</a>
+                  <a href="https://app.emailverifier.io/signin">Sign In</a>
                 </Button>
                 <Button className="justify-start" asChild>
-                  <a href="/register">Get Started</a>
+                  <a href="https://app.emailverifier.io/register">Get Started</a>
                 </Button>
               </div>
             </nav>
