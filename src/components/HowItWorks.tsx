@@ -66,7 +66,7 @@ const HowItWorks = () => {
                   <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-base leading-7 text-gray-600">
+                  <p className="mt-2 text-base  text-gray-600">
                     {step.description}
                   </p>
                 </div>

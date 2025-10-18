@@ -17,7 +17,7 @@ export default function CTA() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white">
           <h2 className="text-3xl lg:text-5xl font-semibold mb-5">
-            Ready to Improve Your <span className='text-blue-600'>Email Deliverability?</span>
+            Ready to Improve Your <span className='text-blue-600'>Email Deliverability</span>
           </h2>
           <p className="text-xl text-blue-50 mb-12 max-w-3xl mx-auto">
             Join thousands of businesses using Email Verifier to maintain clean email lists
