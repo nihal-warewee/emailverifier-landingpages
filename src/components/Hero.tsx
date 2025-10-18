@@ -23,8 +23,8 @@ export default function Hero() {
         <div className="flex-1">
           {/* top badges */}
           <div className="flex items-center gap-3">
-            <img src="/assets/productHunt.png" alt="Product Hunt" className="h-6" />
-            <img src="/assets/trustPilot.png" alt="Trustpilot" className="h-6" />
+            <img src="/assets/productHunt.svg" alt="Product Hunt" className="h-8" />
+            <img src="/assets/trustPilot.svg" alt="Trustpilot" className="h-8" />
           </div>
 
           {/* main heading */}
@@ -71,7 +71,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-6 text-md text-blue-800 mt-10">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>1,000 Free Verifications</span>
+              <span>100 Free Verifications</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
@@ -79,7 +79,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>Cancel Anytime</span>
+              <span>No Credit Card Required</span>
             </div>
           </div>
         </div>

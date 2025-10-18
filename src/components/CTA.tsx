@@ -24,7 +24,7 @@ export default function CTA() {
             and achieve better campaign results.
           </p>
 
-          <div className="flex flex-col gap-4 items-center *:w-full *:max-w-xs mb-8">
+          <div className="flex flex-col gap-4 items-center *:w-full *:max-w-xs mb-10">
             <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-xl px-8 py-3
             transition-opacity duration-300 ease-in font-normal" asChild>
               <a href="/register">
@@ -42,7 +42,7 @@ export default function CTA() {
           <div className="flex flex-wrap justify-center items-center gap-6 text-white">
             <div className="flex items-center">
               <CheckCircle className="w-5 h-5 mr-2" />
-              1,000 Free Verifications
+              100 Free Verifications
             </div>
             <div className="flex items-center">
               <CheckCircle className="w-5 h-5 mr-2" />
@@ -50,7 +50,7 @@ export default function CTA() {
             </div>
             <div className="flex items-center">
               <CheckCircle className="w-5 h-5 mr-2" />
-              Cancel Anytime
+              No Credit Card Required
             </div>
           </div>
         </div>
