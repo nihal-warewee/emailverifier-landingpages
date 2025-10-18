@@ -42,9 +42,9 @@ const LinkedInIcon = () => (
 );
 
 const socialLinks = [
-  { href: '#', icon: XIcon, label: 'X (formerly Twitter)' },
-  { href: '#', icon: FBIcon, label: 'Facebook' },
-  { href: '#', icon: InstaIcon, label: 'Instagram' },
+  // { href: '#', icon: XIcon, label: 'X (formerly Twitter)' },
+  // { href: '#', icon: FBIcon, label: 'Facebook' },
+  // { href: '#', icon: InstaIcon, label: 'Instagram' },
   { href: '#', icon: LinkedInIcon, label: 'LinkedIn' },
 ];
 
@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="absolute -bottom-[90px] -right-[90px] w-[180px] h-[180px] rounded-full bg-[#F6F9FF66] opacity-80"></div>
       </div>
 
-      <div className="container mx-auto px-6 sm:px-6 lg:px-8 py-16 pb-10 relative z-10">
+      <div className="container mx-auto px-6 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="md:col-span-3 lg:col-span-2">
@@ -110,9 +110,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold text-slate-900 mb-2">Legal Links</h3>
             <div className="space-y-1">
               <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Privacy Policy</a>
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Cookie Policy</a>
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Disclaimer</a>
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Copyright</a>
+              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms</a>
             </div>
           </div>
 
@@ -122,22 +120,13 @@ export default function Footer() {
             <div className="space-y-1">
               <a href="mailto:support@emailverifier.com" className="flex items-center text-slate-600 hover:text-slate-900 transition-colors">
                 <Mail className="w-5 h-5 mr-2 flex-shrink-0" />
-                <span>support@emailverifier.com</span>
-              </a>
-              <a href="tel:+15551234567" className="flex items-center text-slate-600 hover:text-slate-900 transition-colors">
-                <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>support@emailverifier.io</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-slate-200 mt-10 pt-10">
-          <div className="flex items-center space-x-6">
-            <a href="#" className="text-lg text-slate-500 hover:text-slate-800 transition-colors">Privacy policy</a>
-            <a href="#" className="text-lg text-slate-500 hover:text-slate-800 transition-colors">Terms and condition</a>
-          </div>
-        </div>
+        
       </div>
     </footer>
   );
