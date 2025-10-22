@@ -28,14 +28,9 @@ export default function CTA() {
             <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-xl px-8 py-3
             transition-opacity duration-300 ease-in font-normal" asChild>
               <a href="/register">
-                Start Free Trial
+                Try It Free
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-            </Button>
-            <Button size="lg"
-              className="bg-white hover:bg-blue-100 text-blue-800 font-medium text-xl px-8 py-3
-            transition-colors duration-300 ease-in" asChild>
-              <a href="/contact">Schedule Demo</a>
             </Button>
           </div>
 
