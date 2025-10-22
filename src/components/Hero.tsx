@@ -52,18 +52,9 @@ export default function Hero() {
               asChild
             >
               <a href="/register">
-                Start Free Trial
+                Try It Free
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </Button>
-
-            <Button
-              variant="outline"
-              size="lg"
-              className="px-6 py-3 text-blue-800 border border-blue-500 bg-white hover:bg-blue-50"
-              asChild
-            >
-              <a href="/pricing">View Pricing</a>
             </Button>
           </div>
 
