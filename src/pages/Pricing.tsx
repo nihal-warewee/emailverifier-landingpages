@@ -1,80 +1,176 @@
-import React, { useMemo, useState } from 'react';
-import { Mail } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-
-const numberFormatter = new Intl.NumberFormat('en-US');
-
-const PRESETS = [10000, 25000, 50000, 100000, 500000, 1000000, 5000000];
+import { useState } from "react";
+import { MinusIcon, PlusIcon } from "lucide-react";
+import DiamondSvg from "@/assets/DiamondSvg";
+import TargetWithArrowSvg from "@/assets/TargetWithArrowSvg";
+import BlissSvg from "@/assets/BlissSvg";
+import CheckSvg from "@/assets/CheckSvg";
 
 export default function Pricing() {
-  const [quantity, setQuantity] = useState<number>(50000);
+  const [volume, setVolume] = useState(10000);
+  const presets = [10000, 25000, 50000, 100000, 500000, 1000000, 5000000, 10000000];
+  const ratePerThousand = 1.8; // $1.80 per 1000 emails
+  const usdToInr = 87.94;
 
-  // $1 per 100 verifications
-  const estimatedPrice = useMemo(() => {
-    const q = Math.max(0, Math.floor(quantity || 0));
-    return +(q / 100).toFixed(2);
-  }, [quantity]);
+  const formatNumber = (num: number) => num.toLocaleString("en-US");
 
-  const handlePreset = (val: number) => setQuantity(val);
-
-  const handleCalculate = () => {
-    // Hook up to your pricing API or navigate if desired
-    // For now, this just no-ops; the computed estimate is displayed below.
+  const calculatePrice = (emails: number) => {
+    const priceUSD = (emails / 1000) * ratePerThousand;
+    const priceINR = priceUSD * usdToInr;
+    return { usd: priceUSD.toFixed(2), inr: priceINR.toFixed(2) };
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setVolume(Number(e.target.value));
+
+  const decrease = () => setVolume((v) => Math.max(1000, v - 1000));
+  const increase = () => setVolume((v) => Math.min(10000000, v + 1000));
+
+  const price = calculatePrice(volume);
+
   return (
-    <section id="pricing" className="py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-extrabold tracking-tight text-gray-900 mb-8">
-          Email Verification Prices
+    <section id="pricing" className="w-full bg-blue-50 py-14 sm:py-20 flex flex-col items-center px-4">
+      <div className="max-w-3xl text-center">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+          Smart Email Verification Pricing
         </h2>
+        <p className="text-gray-900 mb-8 text-sm sm:text-base">
+          Choose your volume, see instant pricing. No surprises.
+        </p>
+      </div>
 
-        <p className="text-2xl text-gray-700 mb-6">How many emails do you want to verify:</p>
+      {/* Calculator */}
+      <div className="bg-white p-5 sm:p-8 sm:px-12 rounded-xl shadow-sm w-full max-w-4xl 2xl:max-w-6xl mb-12">
+        <label className="block text-gray-800 font-medium mb-3 text-center sm:text-left">
+          Email Volume
+        </label>
 
-        <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
-          <div className="relative flex-1">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Mail className="w-5 h-5 text-gray-400" />
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+          <button
+            onClick={decrease}
+            className="h-12 w-12 border border-gray-300 rounded-md 
+            grid place-items-center hover:bg-gray-100 active:scale-95 transition"
+          >
+            <MinusIcon className="w-4 h-4" />
+          </button>
+
+          <input
+            type="text"
+            value={formatNumber(volume)}
+            readOnly
+            className="text-center w-36 sm:w-56 border border-gray-300 rounded-md 
+            py-2 text-lg font-medium focus:outline-none
+            flex-[3]"
+          />
+
+          <button
+            onClick={increase}
+            className="h-12 w-12 border border-gray-300 rounded-md 
+            grid place-items-center hover:bg-gray-100 active:scale-95 transition"
+          >
+            <PlusIcon className="w-4 h-4" />
+          </button>
+
+          <button className="w-full sm:w-auto sm:flex-1 ml-0 sm:ml-10 
+          bg-gradient-to-r from-blue-600 to-blue-800 hover:shadow-lg text-white font-medium 
+          px-5 py-3 rounded-md transition">
+            Calculate
+          </button>
+        </div>
+
+        {/* Slider */}
+        <input
+          type="range"
+          min="1000"
+          max="10000000"
+          step="1000"
+          value={volume}
+          onChange={handleChange}
+          className="w-full accent-blue-600 mb-4 cursor-pointer custom-slider"
+        />
+
+        {/* Scale */}
+        <div className="flex justify-between text-xs sm:text-sm text-gray-900 mb-4">
+          <span>1K</span>
+          <span>100K</span>
+          <span>1M</span>
+          <span>10M</span>
+        </div>
+
+        {/* Presets */}
+        <div className="flex flex-wrap gap-2 justify-center">
+          {presets.map((p) => (
+            <button
+              key={p}
+              onClick={() => setVolume(p)}
+              className={`px-3 py-1.5 rounded-md border text-sm font-medium transition ${p === volume
+                ? "bg-blue-100 text-black border-blue-600"
+                : "bg-white border-gray-300 hover:bg-gray-100"
+                }`}
+            >
+              {p >= 1000000 ? `${p / 1000000}M` : `${p / 1000}K`}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Pricing Card */}
+      <div className="bg-white shadow-sm w-full max-w-xl overflow-hidden">
+
+        <div className="border-b shadow-sm border-gray-200 px-8 pt-10 pb-2">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold
+           bg-blue-100 text-blue-600 px-2 py-1 rounded-full uppercase tracking-wide">
+            <DiamondSvg /> One-Time Purchase
+          </span>
+          <div className="flex flex-col gap-4 my-3">
+            <div className="h-8 w-8 bg-blue-100 rounded-full grid place-items-center shrink-0">
+              <TargetWithArrowSvg />
             </div>
-            <Input
-              type="number"
-              min={0}
-              value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-              className="pl-12 h-14 text-xl"
-              placeholder="50000"
-            />
+            <div>
+              <h3 className="text-xl font-bold text-gray-800">Verification Credits</h3>
+              <p className="text-gray-900 text-sm leading-tight">
+                {formatNumber(volume)} never-expiring verification credits
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-8 pb-8 pt-2">
+          <div className="bg-gradient-to-r from-blue-100 to-purple-100 
+          rounded-md text-center py-4 my-6">
+            <p>Pay once, Use Forever</p>
+            <p className="text-3xl font-bold text-gray-800 my-2">${price.usd}</p>
+            {/* <p className="text-sm text-gray-500">≈ ₹{price.inr}</p> */}
+            <p className="text-sm text-gray-600 mt-1">${ratePerThousand} per 1,000 emails</p>
           </div>
 
-          <Button onClick={handleCalculate} className="h-14 px-8 text-white font-semibold text-lg bg-gradient-to-r from-teal-500 to-blue-600">
-            Calculate price
-          </Button>
-        </div>
+          <p className="text-lg font-medium text-black mb-3 inline-flex gap-2 items-center">
+            <BlissSvg /> What's Included</p>
+          <ul className="space-y-2 text-gray-900 text-md">
+            {[
+              "Bulk Email Verification",
+              "Real-time API Access",
+              "CSV List Cleaning",
+              "Disposable Email Detection",
+              "Role-based Filtering",
+              "No Expiration Date",
+            ].map((feature, i) => (
+              <li key={i} className="flex items-center gap-2">
+                <CheckSvg />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
 
-        <div className="flex flex-wrap gap-4 mt-8">
-          {PRESETS.map((preset) => {
-            const active = quantity === preset;
-            return (
-              <button
-                key={preset}
-                onClick={() => handlePreset(preset)}
-                className={`flex items-center gap-2 px-5 py-3 rounded-full border-2 transition-colors ${
-                  active
-                    ? 'border-teal-600 text-teal-700 bg-teal-50'
-                    : 'border-teal-400 text-teal-600 hover:bg-teal-50'
-                }`}
-              >
-                <Mail className="w-5 h-5" />
-                <span className="font-semibold">{numberFormatter.format(preset)}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="mt-8 text-gray-600">
-          <span className="text-lg">Estimated price: </span>
-          <span className="text-2xl font-bold text-gray-900">${numberFormatter.format(estimatedPrice)}</span>
+          <div className="flex flex-col sm:flex-row gap-3 mt-12">
+            <button className="w-full border border-blue-800 rounded-md py-2 hover:bg-blue-50 
+            font-medium text-blue-800 hover:shadow-lg transition duration-300">
+              Learn More
+            </button>
+            <button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white 
+            font-medium rounded-md py-2 hover:shadow-lg hover:from-blue-700 hover:to-blue-900 transition duration-300">
+              Buy Credits →
+            </button>
+          </div>
         </div>
       </div>
     </section>

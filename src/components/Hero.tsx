@@ -1,113 +1,94 @@
-'use client';
-
-import { useState } from 'react';
-import { CheckCircle, Mail, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Card } from './ui/card';
+
 
 export default function Hero() {
-  const [email, setEmail] = useState('');
-  const [isVerifying, setIsVerifying] = useState(false);
-
-  const handleVerify = async () => {
-    if (!email) return;
-    setIsVerifying(true);
-    // Simulate verification
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsVerifying(false);
-  };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 lg:py-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              99.9% Accuracy Guaranteed
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Verify Email Addresses
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent block">
-                Instantly
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Reduce bounce rates by up to 98% with our advanced email validation service. 
-              Protect your sender reputation and improve deliverability with real-time verification.
-            </p>
+    <section className="relative overflow-hidden bg-white isolate">
+      <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-2 items-center relative px-4 lg:px-10 2xl:px-44 py-10 xl:py-20 2xl:py-24">
+        {/* dotted background */}
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="text-lg px-8 py-3" asChild>
-                <a href="/register">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3" asChild>
-                <a href="/pricing">View Pricing</a>
-              </Button>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                No Setup Required
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                API Integration
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                GDPR Compliant
-              </div>
-            </div>
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, rgba(209,226,255,1) 2px, transparent 2px), linear-gradient(180deg, rgba(59,130,246,0.03), rgba(99,102,241,0.01))",
+            backgroundSize: "50px 50px, 100% 100%",
+            backgroundPosition: "0 0, 0 0",
+          }}
+        />
+        {/* LEFT: heading and CTAs */}
+        <div className="flex-1">
+          {/* top badges */}
+          <div className="flex items-center gap-3">
+            <img src="/assets/productHunt.svg" alt="Product Hunt" className="h-8" />
+            <img src="/assets/trustPilot.svg" alt="Trustpilot" className="h-8" />
           </div>
 
-          {/* Right Content - Demo */}
-          <div className="relative">
-            <Card className="p-8 shadow-2xl bg-white/80 backdrop-blur-sm border-0">
-              <div className="text-center mb-6">
-                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Try it Free</h3>
-                <p className="text-gray-600">Verify an email address instantly</p>
-              </div>
+          {/* main heading */}
+          <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mt-4">
+            <span className="inline-block mr-3 text-blue-600 align-middle relative">#1
+              <svg className='scale-75 lg:scale-100 absolute' width="59" height="8" viewBox="0 0 59 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.66382 6.88859C1.99342 6.76873 2.32302 6.64887 4.47793 6.01781C6.63284 5.38675 10.6031 4.24812 15.9893 3.36192C21.3756 2.47571 28.0575 1.87643 34.234 1.72502C40.4104 1.57361 45.8788 1.88824 49.6023 2.28253C53.3258 2.67683 55.1386 3.14127 56.2148 3.44046C57.291 3.73965 57.5756 3.8595 57.8689 4.02839" stroke="#FFE100" strokeWidth="2" strokeLinecap="round" />
+              </svg>
 
-              <div className="space-y-4">
-                <div className="flex gap-2">
-                  <Input
-                    type="email"
-                    placeholder="Enter email address..."
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1"
-                  />
-                  <Button 
-                    onClick={handleVerify}
-                    disabled={isVerifying || !email}
-                    className="px-6"
-                  >
-                    {isVerifying ? 'Verifying...' : 'Verify'}
-                  </Button>
-                </div>
+            </span>
+            <span className="align-middle">Email Validator Tool</span>
+          </h1>
 
-                <div className="text-xs text-gray-500 text-center">
-                  No registration required • Instant results
-                </div>
-              </div>
-            </Card>
+          {/* subtext */}
+          <p className="text-lg lg:text-2xl text-gray-600 max-w-2xl mt-3">
+            Clean your email list instantly. Protect your sender reputation and improve deliverability with real-time verification.
+          </p>
 
-            {/* Floating Stats */}
-            <div className="absolute -top-4 -right-4 bg-green-500 text-white p-3 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold">98%</div>
-              <div className="text-xs opacity-90">Bounce Reduction</div>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <Button
+              size="lg"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-900 text-white
+              px-6 lg:px-16 py-3 hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              asChild
+            >
+              <a href="/register">
+                Try It Free
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
+
+          {/* micro-features row */}
+          <div className="flex flex-wrap items-center gap-6 text-md text-blue-800 mt-10">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
+              <span>100 Free Verifications</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
+              <span>No Setup Required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
+              <span>No Credit Card Required</span>
             </div>
           </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="flex-1 flex justify-end max-w-lg 2xl:max-w-2xl">
+          <img src="assets/heroImage.png" alt="hero image" />
+        </div>
+      </div>
+
+      {/* Brands row */}
+      <div className='my-10 border-t border-transparent'>
+        <p className='text-xl lg:text-2xl text-center font-semibold'>Leading Brands and Agencies Using emailverifier.io</p>
+        <div className="mt-6 flex justify-center items-center gap-10 flex-wrap *:aspect-auto *:w-36">
+          <img src="/logos/wareweeLogo.png" alt="Warewe" />
+          <img src="/logos/redserpLogo.png" alt="RedSorp" />
+          <img src="/logos/paperboatLogo.png" alt="Paperbot AI" />
+          <img src="/logos/saasyogiLogo.png" alt="SaaS Yogi" />
         </div>
       </div>
     </section>

@@ -16,15 +16,17 @@ import ContactPage from './pages/Contact';
 import CTA from './components/CTA';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
+import LogoCloud from './components/LogoCloud';
 
 // Home page component
 const HomePage = () => (
   <main className="min-h-screen">
   
   <Hero />
-  <Features />
   <HowItWorks />
+  <Features />
   <Pricing />
+  <LogoCloud />
   <Testimonials />
   <CTA />
   
