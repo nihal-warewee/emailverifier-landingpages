@@ -27,7 +27,7 @@ export default function CTA() {
           <div className="flex flex-col gap-4 items-center *:w-full *:max-w-xs mb-10">
             <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-xl px-8 py-3
             transition-opacity duration-300 ease-in font-normal" asChild>
-              <a href="/register">
+              <a href="https://app.emailverifier.io/register">
                 Try It Free
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>

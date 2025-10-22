@@ -36,10 +36,10 @@ export default function Header() {
             py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
               <ul className='hidden group-hover:flex flex-col list-none
               absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-100 hover:text-gray-800'>GLobal Coverage</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'>Detailed Analytics</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'>GDPR Compliant</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'>API Integration</li>
+                <li className='hover:bg-gray-100 hover:text-gray-800' onClick={() => window.location.href = '/#advanced-validation'}>Global Coverage</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#spam-trap-detection'}>Detailed Analytics</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#gdpr-compliant'}>GDPR Compliant</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#api-integration'}>API Integration</li>
               </ul>
 
             </div>

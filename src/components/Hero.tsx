@@ -51,7 +51,7 @@ export default function Hero() {
               px-6 lg:px-16 py-3 hover:shadow-xl transition-shadow duration-300 ease-in-out"
               asChild
             >
-              <a href="/register">
+              <a href="https://app.emailverifier.io/register">
                 Try It Free
                 <ArrowRight className="w-4 h-4" />
               </a>
