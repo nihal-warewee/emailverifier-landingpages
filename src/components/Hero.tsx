@@ -47,8 +47,8 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Button
               size="lg"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-900 hover:bg-blue-600 text-white
-                 px-6 py-3 shadow-md hover:from-blue-700 hover:to-indigo-700"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-900 text-white
+              px-6 lg:px-16 py-3 hover:shadow-xl transition-shadow duration-300 ease-in-out"
               asChild
             >
               <a href="/register">

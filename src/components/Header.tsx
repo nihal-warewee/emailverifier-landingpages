@@ -35,13 +35,11 @@ export default function Header() {
             <div className="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 
             py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
               <ul className='hidden group-hover:flex flex-col list-none
-              absolute top-full w-52 bg-gray-800 text-white *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-700'>Advanced Validation</li>
-                <li className='hover:bg-gray-700'>Real-time Processing</li>
-                <li className='hover:bg-gray-700'>GLobal Coverage</li>
-                <li className='hover:bg-gray-700'>Detailed Analytics</li>
-                <li className='hover:bg-gray-700'>GDPR Compliant</li>
-                <li className='hover:bg-gray-700'>API Integration</li>
+              absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
+                <li className='hover:bg-gray-100 hover:text-gray-800'>GLobal Coverage</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'>Detailed Analytics</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'>GDPR Compliant</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'>API Integration</li>
               </ul>
 
             </div>
