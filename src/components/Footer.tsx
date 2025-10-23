@@ -111,7 +111,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold text-slate-900 mb-2">Legal Links</h3>
             <div className="space-y-1">
               <a href="/privacy-policy" className="block text-slate-600 hover:text-slate-900 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms</a>
+              <a href="/terms" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms And Conditions</a>
             </div>
           </div>
 
