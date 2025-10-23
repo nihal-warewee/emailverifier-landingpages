@@ -5,50 +5,50 @@ const features = [
   {
     icon: Shield,
     title: 'Advanced Validation',
-    id: 'feature-advanced-validation',
     description:
       'Multi-layer verification including syntax, domain, and mailbox validation with 99.9% accuracy.',
     card: "/assets/featuresCard/FeatureValidation.svg",
+    id: "advanced-validation"
   },
   {
     icon: Zap,
     title: 'Spam Trap Detection',
-    id: 'feature-spam-trap-detection',
     description:
       'Detects and removes spam traps to protect your sender reputation and ensure safe email delivery.',
     card: "/assets/featuresCard/FeatureThreat.svg",
+    id: "spam-trap-detection"
   },
   {
     icon: Globe,
     title: 'Disposable Email Check',
-    id: 'feature-disposable-email-check',
     description:
       'Identifies temporary or one-time use emails to keep your mailing list clean and reliable.',
     card: "/assets/featuresCard/FeatureDisposable.svg",
+    id: "disposable-email-check"
   },
   {
     icon: BarChart3,
     title: 'Catch All Email Check',
-    id: 'feature-catch-all-email-check',
     description:
       'Detects domains that accept all emails, helping you avoid risky or unverifiable addresses.',
     card: "/assets/featuresCard/FeatureCatchAll.svg",
+    id: "catch-all-email-check"
   },
   {
     icon: Lock,
     title: 'GDPR Compliant',
-    id: 'feature-gdpr-compliant',
     description:
       'Fully compliant with data protection regulations. Your data is secure and private.',
     card: "/assets/featuresCard/FeatureCompliance.svg",
+    id: "gdpr-compliant"
   },
   {
     icon: Cpu,
     title: 'API Integration',
-    id: 'feature-api-integration',
     description:
       'Easy-to-use REST API with comprehensive documentation and SDKs for popular languages.',
     card: "/assets/featuresCard/FeatureApi.svg",
+    id: "api-integration"
   },
 ];
 
@@ -71,9 +71,9 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              id={feature.id}
               className={`flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-10 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
                 }`}
+              id={feature.id}
             >
 
               <div className="lg:w-[55%] flex justify-center">
