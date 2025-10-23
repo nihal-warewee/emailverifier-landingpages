@@ -101,8 +101,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Explore</h3>
             <div className="space-y-1">
-              <a href="/features" className="block text-slate-600 hover:text-slate-900 transition-colors">Features</a>
-              <a href="/pricing" className="block text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
+              <a href="/#features" className="block text-slate-600 hover:text-slate-900 transition-colors">Features</a>
+              <a href="/#pricing" className="block text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
             </div>
           </div>
 

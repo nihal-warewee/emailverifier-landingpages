@@ -7,8 +7,6 @@ import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 
 // Import page components
-import FeaturesPage from './pages/Features';
-import PricingPage from './pages/Pricing';
 import CTA from './components/CTA';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
@@ -42,8 +40,6 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
           <Route path='/privacy-policy' element={<PrivacyPage />} />
           <Route path='/terms' element={<TermsPage />} />
         </Routes>
