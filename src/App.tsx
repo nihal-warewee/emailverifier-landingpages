@@ -9,14 +9,13 @@ import Footer from './components/Footer';
 // Import page components
 import FeaturesPage from './pages/Features';
 import PricingPage from './pages/Pricing';
-import APIPage from './pages/API';
-import BlogPage from './pages/Blog';
-import AboutPage from './pages/About';
-import ContactPage from './pages/Contact';
 import CTA from './components/CTA';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import LogoCloud from './components/LogoCloud';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
+
 
 // Home page component
 const HomePage = () => (
@@ -39,16 +38,14 @@ const HomePage = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white flex flex-col">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/api" element={<APIPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path='/privacy-policy' element={<PrivacyPage />} />
+          <Route path='/terms' element={<TermsPage />} />
         </Routes>
         <Footer />
       </div>
