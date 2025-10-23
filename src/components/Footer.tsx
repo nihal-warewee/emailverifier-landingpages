@@ -45,7 +45,7 @@ const socialLinks = [
   // { href: '#', icon: XIcon, label: 'X (formerly Twitter)' },
   // { href: '#', icon: FBIcon, label: 'Facebook' },
   // { href: '#', icon: InstaIcon, label: 'Instagram' },
-  { href: '#', icon: LinkedInIcon, label: 'LinkedIn' },
+  { href: 'https://www.linkedin.com/company/email-verifier/', icon: LinkedInIcon, label: 'LinkedIn' },
 ];
 
 export default function Footer() {
@@ -88,6 +88,7 @@ export default function Footer() {
                   key={index}
                   href={link.href}
                   aria-label={link.label}
+                  target='_blank'
                   className="w-14 h-14 border border-slate-200 rounded-full flex justify-center items-center hover:bg-slate-100 transition-colors"
                 >
                   <link.icon />
@@ -100,8 +101,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Explore</h3>
             <div className="space-y-1">
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Features</a>
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
+              <a href="/features" className="block text-slate-600 hover:text-slate-900 transition-colors">Features</a>
+              <a href="/pricing" className="block text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
             </div>
           </div>
 
@@ -109,8 +110,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Legal Links</h3>
             <div className="space-y-1">
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Privacy Policy</a>
-              <a href="#" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms</a>
+              <a href="/privacy-policy" className="block text-slate-600 hover:text-slate-900 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms</a>
             </div>
           </div>
 
@@ -118,7 +119,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Contact</h3>
             <div className="space-y-1">
-              <a href="mailto:support@emailverifier.com" className="flex items-center text-slate-600 hover:text-slate-900 transition-colors">
+              <a href="mailto:support@emailverifier.io" className="flex items-center text-slate-600 hover:text-slate-900 transition-colors">
                 <Mail className="w-5 h-5 mr-2 flex-shrink-0" />
                 <span>support@emailverifier.io</span>
               </a>

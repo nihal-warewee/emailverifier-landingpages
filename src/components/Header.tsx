@@ -36,10 +36,10 @@ export default function Header() {
             py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
               <ul className='hidden group-hover:flex flex-col list-none
               absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-100 hover:text-gray-800'>GLobal Coverage</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'>Detailed Analytics</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'>GDPR Compliant</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'>API Integration</li>
+                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/features">GLobal Coverage</a></li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/features">Detailed Analytics</a></li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/features">GDPR Compliant</a></li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/features">API Integration</a></li>
               </ul>
 
             </div>
@@ -73,10 +73,6 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <a href="/features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
               <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-              <a href="/api-docs" className="text-gray-600 hover:text-blue-600 transition-colors">API</a>
-              <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
-              <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-              <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start" asChild>
                   <a href="https://app.emailverifier.io/signin">Sign In</a>
