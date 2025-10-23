@@ -54,8 +54,7 @@ export default function Terms() {
           <h2 className="text-2xl font-semibold mt-8 mb-3">6. Governing Law</h2>
           <p>
             These Terms shall be governed by and construed in accordance with the laws
-            of India. Any disputes arising under these Terms will be subject to the
-            jurisdiction of the courts located in Kasaragod, Kerala.
+            of India.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-3">7. Contact Us</h2>
