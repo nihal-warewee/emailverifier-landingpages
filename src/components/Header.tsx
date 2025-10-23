@@ -36,14 +36,16 @@ export default function Header() {
             py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
               <ul className='hidden group-hover:flex flex-col list-none
               absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/features">GLobal Coverage</a></li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/features">Detailed Analytics</a></li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/features">GDPR Compliant</a></li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/features">API Integration</a></li>
+                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-advanced-validation">Advanced Validation</a></li>
+                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-spam-trap-detection">Spam Trap Detection</a></li>
+                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-disposable-email-check">Disposable Email Check</a></li>
+                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-catch-all-email-check">Catch-All Detection</a></li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/#feature-gdpr-compliant">GDPR Compliant</a></li>
+                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/#feature-api-integration">API Integration</a></li>
               </ul>
 
             </div>
-            <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+            <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
           </nav>
 
           {/* Desktop CTA */}
@@ -71,8 +73,8 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
-              <a href="/features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
-              <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+              <a href="/#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
+              <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start" asChild>
                   <a href="https://app.emailverifier.io/signin">Sign In</a>
