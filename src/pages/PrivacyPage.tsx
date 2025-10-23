@@ -1,4 +1,4 @@
-export default function Privacy() {
+export default function PrivacyPage() {
   return (
     <main className="flex-grow bg-white px-6 py-16 text-gray-800">
       <div className="max-w-4xl mx-auto">

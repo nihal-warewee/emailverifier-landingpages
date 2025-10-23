@@ -13,8 +13,9 @@ import CTA from './components/CTA';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import LogoCloud from './components/LogoCloud';
-import PrivacyPage from './pages/privacy';
-import TermsPage from './pages/Terms'
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
+
 
 // Home page component
 const HomePage = () => (
