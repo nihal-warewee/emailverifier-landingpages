@@ -43,7 +43,7 @@ export default function Header() {
               </ul>
 
             </div>
-            <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+            <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
           </nav>
 
           {/* Desktop CTA */}
@@ -71,12 +71,8 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
-              <a href="/features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
-              <a href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-              <a href="/api-docs" className="text-gray-600 hover:text-blue-600 transition-colors">API</a>
-              <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
-              <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-              <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+              <a href="/#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
+              <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start" asChild>
                   <a href="https://app.emailverifier.io/signin">Sign In</a>
