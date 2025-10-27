@@ -66,7 +66,7 @@ export default function Hero() {
 
         {/* RIGHT */}
         <div className="flex-1 flex justify-end max-w-lg 2xl:max-w-2xl">
-          <img src="assets/heroImage.webp" alt="hero image" />
+          <img src="assets/heroImage.webp" alt="hero image" loading='eager' />
         </div>
       </div>
 
