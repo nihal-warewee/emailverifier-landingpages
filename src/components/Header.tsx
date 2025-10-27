@@ -74,7 +74,15 @@ export default function Header() {
 
                 <li
                   className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
-                  onClick={() => window.location.href = '/#bulk-verification'}
+                  onClick={() => window.location.href = '/#real-time-api'}
+                >
+                  <p className="font-semibold text-gray-900">Real-Time API</p>
+                  <p className="text-sm text-gray-600">Verify emails instantly right inside your app.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#bulk-cleaning'}
                 >
                   <p className="font-semibold text-gray-900">Bulk Verification</p>
                   <p className="text-sm text-gray-600">Clean large lists in seconds.</p>

@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+import { LocateIcon, Mail, MapPin, PinIcon } from 'lucide-react';
 
 
 // const XIcon = () => (
@@ -95,6 +95,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
           </div>
 
           {/* Explore Links */}
@@ -118,17 +119,23 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Contact</h3>
-            <div className="space-y-1">
+            <div className="space-y-3">
               <a href="mailto:support@emailverifier.io" className="flex items-center text-slate-600 hover:text-slate-900 transition-colors">
                 <Mail className="w-5 h-5 mr-2 flex-shrink-0" />
                 <span>support@emailverifier.io</span>
               </a>
+              <p className='text-slate-600 text-sm inline-flex max-w-xs lg:max-w-none'>
+                <MapPin className='w-5 h-5 mr-2 flex-shrink-0' />
+                1111B S Governors Ave STE 25016 Dover, DE, 19904 US</p>
             </div>
           </div>
         </div>
 
 
       </div>
+      {/* <p className="text-center text-black text-xs pb-2">
+        ©2025 EmailVerifier.io, All rights reserved
+      </p> */}
     </footer>
   );
 }
