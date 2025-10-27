@@ -36,12 +36,10 @@ export default function Header() {
             py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
               <ul className='hidden group-hover:flex flex-col list-none
               absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-advanced-validation">Advanced Validation</a></li>
-                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-spam-trap-detection">Spam Trap Detection</a></li>
-                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-disposable-email-check">Disposable Email Check</a></li>
-                <li className='hover:bg-gray-100 hover:text-gray-800'><a href="/#feature-catch-all-email-check">Catch-All Detection</a></li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/#feature-gdpr-compliant">GDPR Compliant</a></li>
-                <li className='hover:bg-gray-100  hover:text-gray-800'><a href="/#feature-api-integration">API Integration</a></li>
+                <li className='hover:bg-gray-100 hover:text-gray-800' onClick={() => window.location.href = '/#advanced-validation'}>Global Coverage</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#spam-trap-detection'}>Detailed Analytics</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#gdpr-compliant'}>GDPR Compliant</li>
+                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#api-integration'}>API Integration</li>
               </ul>
 
             </div>
