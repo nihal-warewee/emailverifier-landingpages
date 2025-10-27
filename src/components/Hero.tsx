@@ -66,7 +66,7 @@ export default function Hero() {
 
         {/* RIGHT */}
         <div className="flex-1 flex justify-end max-w-lg 2xl:max-w-2xl">
-          <img src="assets/heroImage.png" alt="hero image" />
+          <img src="assets/heroImage.webp" alt="hero image" />
         </div>
       </div>
 
@@ -74,10 +74,10 @@ export default function Hero() {
       <div className='my-10 border-t border-transparent'>
         <p className='text-xl lg:text-2xl text-center font-semibold'>Leading Brands and Agencies Using emailverifier.io</p>
         <div className="mt-6 flex justify-center items-center gap-10 flex-wrap *:aspect-auto *:w-36">
-          <img src="/logos/wareweeLogo.png" alt="Warewe" />
-          <img src="/logos/redserpLogo.png" alt="RedSorp" />
-          <img src="/logos/paperboatLogo.png" alt="Paperbot AI" />
-          <img src="/logos/saasyogiLogo.png" alt="SaaS Yogi" />
+          <img src="/logos/wareweeLogo.webp" alt="Warewe" />
+          <img src="/logos/redserpLogo.webp" alt="RedSorp" />
+          <img src="/logos/paperboatLogo.webp" alt="Paperbot AI" />
+          <img src="/logos/saasyogiLogo.webp" alt="SaaS Yogi" />
         </div>
       </div>
     </section>

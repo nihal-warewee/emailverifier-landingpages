@@ -1,8 +1,8 @@
-import googleLogo from '/logos/google.png';
-import microsoftLogo from '/logos/microsoft.png';
-import slackLogo from '/logos/slack.png';
-import deepmindLogo from '/logos/deepmind.png';
-import zohoLogo from '/logos/zoho.png';
+import googleLogo from '/logos/google.webp';
+import microsoftLogo from '/logos/microsoft.webp';
+import slackLogo from '/logos/slack.webp';
+import deepmindLogo from '/logos/deepmind.webp';
+import zohoLogo from '/logos/zoho.webp';
 
 
 const logos = [
