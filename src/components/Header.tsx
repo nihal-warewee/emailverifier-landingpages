@@ -41,7 +41,7 @@ export default function Header() {
                   absolute top-full left-0 w-[480px] bg-white text-gray-800 shadow-lg p-2 rounded-xl"
               >
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#advanced-validation'}
                 >
                   <p className="font-semibold text-gray-900">Advanced Validation</p>
@@ -49,7 +49,7 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#spam-trap-detection'}
                 >
                   <p className="font-semibold text-gray-900">Spam Trap Detection</p>
@@ -57,7 +57,7 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#disposable-email-check'}
                 >
                   <p className="font-semibold text-gray-900">Disposable Email Check</p>
@@ -65,7 +65,7 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#catch-all-detection'}
                 >
                   <p className="font-semibold text-gray-900">Catch-All Detection</p>
@@ -73,7 +73,7 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#real-time-api'}
                 >
                   <p className="font-semibold text-gray-900">Real-Time API</p>
@@ -81,7 +81,7 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#bulk-cleaning'}
                 >
                   <p className="font-semibold text-gray-900">Bulk Verification</p>
@@ -89,7 +89,7 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#role-based-filtering'}
                 >
                   <p className="font-semibold text-gray-900">Role-Based Filtering</p>
