@@ -23,18 +23,18 @@ export default function CTA() {
             Join thousands of marketers keeping their email lists healthy and their messages reaching inboxes.
           </p>
 
-          <div className="flex flex-col gap-4 items-center *:w-full *:max-w-xs mb-10">
+          <div className="flex flex-col gap-4 items-center *:w-full *:max-w-sm mb-10">
             <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-xl px-8 py-3
             transition-opacity duration-300 ease-in font-normal" asChild>
               <a href="https://app.emailverifier.io/register">
-                Try It Free
+                Try It Free - 100 Verifications On Us
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-6 text-white">
-            Try It Free - 100 Verifications On Us. No setup. No credit card. Just results.
+            No setup. No credit card. Just results.
           </div>
         </div>
       </div>

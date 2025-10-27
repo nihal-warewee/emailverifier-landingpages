@@ -35,20 +35,36 @@ const features = [
     id: "catch-all-detection"
   },
   {
+    icon: Cpu,
+    title: 'Real-Time API',
+    description:
+      'Verify emails instantly right inside your app.',
+    card: "/assets/featuresCard/FeatureApi.svg",
+    id: "real-time-api"
+  },
+  {
+    icon: Lock,
+    title: 'Bulk Cleaning',
+    description:
+      'Upload and clean thousands of emails fast.',
+    card: "/assets/featuresCard/FeatureCompliance.svg",
+    id: "bulk-cleaning"
+  },
+  {
+    icon: Lock,
+    title: 'Role-Based Filtering',
+    description:
+      'Skip generic inboxes like info@ or sales@.',
+    card: "/assets/featuresCard/FeatureCompliance.svg",
+    id: "role-based-filtering"
+  },
+  {
     icon: Lock,
     title: 'GDPR & CCPA Compliant',
     description:
       'Your data stays safe, private, and protected - and automatically deletes your files 30 days after upload.',
     card: "/assets/featuresCard/FeatureCompliance.svg",
     id: "gdpr-compliant"
-  },
-  {
-    icon: Cpu,
-    title: 'API Integration',
-    description:
-      'Easy-to-use REST API with comprehensive documentation and SDKs for popular languages.',
-    card: "/assets/featuresCard/FeatureApi.svg",
-    id: "api-integration"
   },
 ];
 
@@ -59,11 +75,8 @@ export default function Features() {
 
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Powerful Email Verification Features
+            Powerful Features That Just Work
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Everything you need to maintain a clean, high-quality email list and improve your delivery rates.
-          </p>
         </div>
 
         {/* Features List */}
