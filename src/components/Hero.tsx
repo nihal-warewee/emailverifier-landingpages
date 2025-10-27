@@ -1,4 +1,4 @@
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 
@@ -35,12 +35,12 @@ export default function Hero() {
               </svg>
 
             </span>
-            <span className="align-middle">Email Validator Tool</span>
+            <span className="align-middle">Email Verification Tool</span>
           </h1>
 
           {/* subtext */}
           <p className="text-lg lg:text-2xl text-gray-600 max-w-2xl mt-3">
-            Clean your email list instantly. Protect your sender reputation and improve deliverability with real-time verification.
+            Clean your email list in seconds. Protect your reputation and make sure your messages reach real people.
           </p>
 
           {/* CTAs */}
@@ -59,19 +59,8 @@ export default function Hero() {
           </div>
 
           {/* micro-features row */}
-          <div className="flex flex-wrap items-center gap-6 text-md text-blue-800 mt-10">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>100 Free Verifications</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>No Setup Required</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>No Credit Card Required</span>
-            </div>
+          <div className="flex flex-wrap items-center gap-6 text-sm lg:text-md text-blue-800 mt-5">
+            Get 100 free verifications - no setup, no credit card, no stress.
           </div>
         </div>
 

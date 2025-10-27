@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { MinusIcon, PlusIcon } from "lucide-react";
 import DiamondSvg from "@/assets/DiamondSvg";
 import TargetWithArrowSvg from "@/assets/TargetWithArrowSvg";
@@ -10,6 +10,8 @@ export default function Pricing() {
   const presets = [10000, 25000, 50000, 100000, 500000, 1000000, 5000000, 10000000];
   const ratePerThousand = 1.8; // $1.80 per 1000 emails
   const usdToInr = 87.94;
+  const pricingCardRef = useRef<HTMLDivElement | null>(null);
+
 
   const formatNumber = (num: number) => num.toLocaleString("en-US");
 
@@ -31,10 +33,10 @@ export default function Pricing() {
     <section id="pricing" className="w-full bg-blue-50 py-14 sm:py-20 flex flex-col items-center px-4">
       <div className="max-w-3xl text-center">
         <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-          Smart Email Verification Pricing
+          Simple, Honest Pricing
         </h2>
         <p className="text-gray-900 mb-8 text-sm sm:text-base">
-          Choose your volume, see instant pricing. No surprises.
+          Pick your volume. See your price instantly. No hidden fees - ever.
         </p>
       </div>
 
@@ -72,7 +74,10 @@ export default function Pricing() {
 
           <button className="w-full sm:w-auto sm:flex-1 ml-0 sm:ml-10 
           bg-gradient-to-r from-blue-600 to-blue-800 hover:shadow-lg text-white font-medium 
-          px-5 py-3 rounded-md transition">
+          px-5 py-3 rounded-md transition"
+            onClick={() => {
+              pricingCardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}>
             Calculate
           </button>
         </div>
@@ -114,7 +119,7 @@ export default function Pricing() {
       </div>
 
       {/* Pricing Card */}
-      <div className="bg-white shadow-sm w-full max-w-xl overflow-hidden">
+      <div ref={pricingCardRef} className="bg-white shadow-sm w-full max-w-xl overflow-hidden">
 
         <div className="border-b shadow-sm border-gray-200 px-8 pt-10 pb-2">
           <span className="inline-flex items-center gap-2 text-xs font-semibold
@@ -128,7 +133,7 @@ export default function Pricing() {
             <div>
               <h3 className="text-xl font-bold text-gray-800">Verification Credits</h3>
               <p className="text-gray-900 text-sm leading-tight">
-                {formatNumber(volume)} never-expiring verification credits
+                {formatNumber(volume)} verification credits that never expire.
               </p>
             </div>
           </div>
@@ -140,19 +145,19 @@ export default function Pricing() {
             <p>Pay once, Use Forever</p>
             <p className="text-3xl font-bold text-gray-800 my-2">${price.usd}</p>
             {/* <p className="text-sm text-gray-500">≈ ₹{price.inr}</p> */}
-            <p className="text-sm text-gray-600 mt-1">${ratePerThousand} per 1,000 emails</p>
+            <p className="text-sm text-gray-600 mt-1">that's just ${ratePerThousand} per 1,000 emails</p>
           </div>
 
           <p className="text-lg font-medium text-black mb-3 inline-flex gap-2 items-center">
             <BlissSvg /> What's Included</p>
           <ul className="space-y-2 text-gray-900 text-md">
             {[
-              "Bulk Email Verification",
-              "Real-time API Access",
+              "Bulk & Real-Time Verification",
+              "API Access",
               "CSV List Cleaning",
               "Disposable Email Detection",
               "Role-based Filtering",
-              "No Expiration Date",
+              "No Expiration",
             ].map((feature, i) => (
               <li key={i} className="flex items-center gap-2">
                 <CheckSvg />
@@ -162,10 +167,6 @@ export default function Pricing() {
           </ul>
 
           <div className="flex flex-col sm:flex-row gap-3 mt-12">
-            <button className="w-full border border-blue-800 rounded-md py-2 hover:bg-blue-50 
-            font-medium text-blue-800 hover:shadow-lg transition duration-300">
-              Learn More
-            </button>
             <button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white 
             font-medium rounded-md py-2 hover:shadow-lg hover:from-blue-700 hover:to-blue-900 transition duration-300">
               Buy Credits →

@@ -33,16 +33,63 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <div className="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 
-            py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
-              <ul className='hidden group-hover:flex flex-col list-none
-              absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-100 hover:text-gray-800' onClick={() => window.location.href = '/#advanced-validation'}>Global Coverage</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#spam-trap-detection'}>Detailed Analytics</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#gdpr-compliant'}>GDPR Compliant</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#api-integration'}>API Integration</li>
-              </ul>
+            py-3 cursor-default group relative">
+              Features <ChevronDown size={"1rem"} />
 
+              <ul
+                className="hidden group-hover:grid grid-cols-2 gap-4 list-none
+                  absolute top-full left-0 w-[480px] bg-white text-gray-800 shadow-lg p-2 rounded-xl"
+              >
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#advanced-validation'}
+                >
+                  <p className="font-semibold text-gray-900">Advanced Validation</p>
+                  <p className="text-sm text-gray-600">Multi-layer email accuracy check.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#spam-trap-detection'}
+                >
+                  <p className="font-semibold text-gray-900">Spam Trap Detection</p>
+                  <p className="text-sm text-gray-600">Protect your sender reputation.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#disposable-email-check'}
+                >
+                  <p className="font-semibold text-gray-900">Disposable Email Check</p>
+                  <p className="text-sm text-gray-600">Remove temporary email addresses.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#catch-all-detection'}
+                >
+                  <p className="font-semibold text-gray-900">Catch-All Detection</p>
+                  <p className="text-sm text-gray-600">Identify risky catch-all domains.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#bulk-verification'}
+                >
+                  <p className="font-semibold text-gray-900">Bulk Verification</p>
+                  <p className="text-sm text-gray-600">Clean large lists in seconds.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-50 p-3 rounded-lg cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#role-based-filtering'}
+                >
+                  <p className="font-semibold text-gray-900">Role-Based Filtering</p>
+                  <p className="text-sm text-gray-600">Exclude generic addresses automatically.</p>
+                </li>
+              </ul>
             </div>
+
             <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
           </nav>
 

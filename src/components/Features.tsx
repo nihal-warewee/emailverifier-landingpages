@@ -6,7 +6,7 @@ const features = [
     icon: Shield,
     title: 'Advanced Validation',
     description:
-      'Multi-layer verification including syntax, domain, and mailbox validation with 99.9% accuracy.',
+      'Smart checks for syntax, domain, and mailbox accuracy.',
     card: "/assets/featuresCard/FeatureValidation.svg",
     id: "advanced-validation"
   },
@@ -14,7 +14,7 @@ const features = [
     icon: Zap,
     title: 'Spam Trap Detection',
     description:
-      'Detects and removes spam traps to protect your sender reputation and ensure safe email delivery.',
+      'Catch hidden traps before they hurt your deliverability.',
     card: "/assets/featuresCard/FeatureThreat.svg",
     id: "spam-trap-detection"
   },
@@ -22,23 +22,23 @@ const features = [
     icon: Globe,
     title: 'Disposable Email Check',
     description:
-      'Identifies temporary or one-time use emails to keep your mailing list clean and reliable.',
+      'Filter out throwaway or fake signups.',
     card: "/assets/featuresCard/FeatureDisposable.svg",
     id: "disposable-email-check"
   },
   {
     icon: BarChart3,
-    title: 'Catch All Email Check',
+    title: 'Catch-All Detection',
     description:
-      'Detects domains that accept all emails, helping you avoid risky or unverifiable addresses.',
+      'Identify risky “accept-all” domains.',
     card: "/assets/featuresCard/FeatureCatchAll.svg",
-    id: "catch-all-email-check"
+    id: "catch-all-detection"
   },
   {
     icon: Lock,
-    title: 'GDPR Compliant',
+    title: 'GDPR & CCPA Compliant',
     description:
-      'Fully compliant with data protection regulations. Your data is secure and private.',
+      'Your data stays safe, private, and protected - and automatically deletes your files 30 days after upload.',
     card: "/assets/featuresCard/FeatureCompliance.svg",
     id: "gdpr-compliant"
   },

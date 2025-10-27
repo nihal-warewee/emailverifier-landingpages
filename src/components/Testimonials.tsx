@@ -5,10 +5,10 @@ const testimonials = [
   {
     name: 'Sarah Johnson',
     title: 'Marketing Director',
-    company: 'SaaS Yogi, LLC',
+    company: 'SaaS Yogi',
     image: '/assets/sarah.png',
     rating: 5,
-    content: 'Email Verifier has been a game-changer for our marketing campaigns. We reduced our bounce rate from 15% to less than 2% and significantly improved our deliverability.',
+    content: 'EmailVerifier.io helped us cut our bounce rate from 15% to under 2%. Total game changer.',
   },
   {
     name: 'Michael Chen',
@@ -16,7 +16,7 @@ const testimonials = [
     company: 'Paperbot AI',
     image: '/assets/michael.png',
     rating: 5,
-    content: 'The API integration was seamless, and the accuracy is outstanding. Their customer support team is incredibly responsive and helpful.',
+    content: 'The API was super easy to set up, and the accuracy blew us away.',
   },
 
   {
@@ -25,7 +25,7 @@ const testimonials = [
     company: 'Redserp',
     image: '/assets/emily.png',
     rating: 5,
-    content: 'We process thousands of emails daily, and Email Verifier handles it all with incredible speed and precision. Highly recommended!',
+    content: 'We clean thousands of emails daily. It\'s fast, reliable, and just works.',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 2xl:max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white rounded-xl shadow-[0_0_10px_rgba(0,100,255,0.2)]">
               <CardContent className="p-5 pt-5 flex flex-col h-full">
