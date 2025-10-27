@@ -1,4 +1,4 @@
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 
@@ -35,12 +35,12 @@ export default function Hero() {
               </svg>
 
             </span>
-            <span className="align-middle">Email Validator Tool</span>
+            <span className="align-middle">Email Verification Tool</span>
           </h1>
 
           {/* subtext */}
           <p className="text-lg lg:text-2xl text-gray-600 max-w-2xl mt-3">
-            Clean your email list instantly. Protect your sender reputation and improve deliverability with real-time verification.
+            Clean your email list in seconds. Protect your reputation and make sure your messages reach real people.
           </p>
 
           {/* CTAs */}
@@ -59,25 +59,14 @@ export default function Hero() {
           </div>
 
           {/* micro-features row */}
-          <div className="flex flex-wrap items-center gap-6 text-md text-blue-800 mt-10">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>100 Free Verifications</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>No Setup Required</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-800 flex-shrink-0" />
-              <span>No Credit Card Required</span>
-            </div>
+          <div className="flex flex-wrap items-center gap-6 text-sm lg:text-md text-blue-800 mt-5">
+            Get 100 free verifications - no setup, no credit card, no stress.
           </div>
         </div>
 
         {/* RIGHT */}
         <div className="flex-1 flex justify-end max-w-lg 2xl:max-w-2xl">
-          <img src="assets/heroImage.png" alt="hero image" />
+          <img src="assets/heroImage.webp" alt="hero image" />
         </div>
       </div>
 
@@ -85,10 +74,10 @@ export default function Hero() {
       <div className='my-10 border-t border-transparent'>
         <p className='text-xl lg:text-2xl text-center font-semibold'>Leading Brands and Agencies Using emailverifier.io</p>
         <div className="mt-6 flex justify-center items-center gap-10 flex-wrap *:aspect-auto *:w-36">
-          <img src="/logos/wareweeLogo.png" alt="Warewe" />
-          <img src="/logos/redserpLogo.png" alt="RedSorp" />
-          <img src="/logos/paperboatLogo.png" alt="Paperbot AI" />
-          <img src="/logos/saasyogiLogo.png" alt="SaaS Yogi" />
+          <img src="/logos/wareweeLogo.webp" alt="Warewe" />
+          <img src="/logos/redserpLogo.webp" alt="RedSorp" />
+          <img src="/logos/paperboatLogo.webp" alt="Paperbot AI" />
+          <img src="/logos/saasyogiLogo.webp" alt="SaaS Yogi" />
         </div>
       </div>
     </section>

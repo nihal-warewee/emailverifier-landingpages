@@ -80,7 +80,7 @@ export default function Footer() {
               <span className="text-4xl font-serif text-slate-900">Email Verifier</span>
             </div>
             <p className="mb-6 leading-tight max-w-sm text-black text-lg">
-              Professional email verification service trusted by thousands of businesses worldwide.
+              Professional email verification trusted by thousands worldwide.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
@@ -108,10 +108,10 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Legal Links</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Legal</h3>
             <div className="space-y-1">
               <a href="/privacy-policy" className="block text-slate-600 hover:text-slate-900 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms</a>
+              <a href="/terms-of-service" className="block text-slate-600 hover:text-slate-900 transition-colors">Terms of Service</a>
             </div>
           </div>
 
