@@ -4,7 +4,8 @@ import { Button } from "./ui/button";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white isolate">
-      <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-2 items-center relative px-4 lg:px-10 2xl:px-44 py-10 xl:pb-20 xl:pt-10 2xl:py-24">
+      <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-2 items-center lg:justify-center 
+      relative px-4 lg:px-10 2xl:px-44 py-10 xl:pb-20 xl:pt-10 2xl:py-24">
         {/* dotted background */}
         <div
           aria-hidden
@@ -17,7 +18,7 @@ export default function Hero() {
         />
 
         {/* LEFT: heading and CTAs */}
-        <div className="flex-1">
+        <div className="flex-1 max-w-2xl">
           {/* top badges */}
           <div className="flex items-center gap-3">
             <img
