@@ -39,7 +39,7 @@ export default function Hero() {
           </h1>
 
           {/* subtext */}
-          <p className="text-lg lg:text-2xl text-gray-600 max-w-2xl mt-3">
+          <p className="text-md lg:text-xl text-gray-600 max-w-xl mt-3">
             Clean your email list in seconds. Protect your reputation and make sure your messages reach real people.
           </p>
 
@@ -59,8 +59,8 @@ export default function Hero() {
           </div>
 
           {/* micro-features row */}
-          <div className="flex flex-wrap items-center gap-6 text-sm lg:text-md text-blue-800 mt-5">
-            Get 100 free verifications - no setup, no credit card, no stress.
+          <div className="text-sm lg:text-md text-blue-800 mt-5">
+            <span className='font-medium'>Get 100 free verifications</span> - no setup, no credit card, no stress.
           </div>
         </div>
 

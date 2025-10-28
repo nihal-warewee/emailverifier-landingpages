@@ -37,63 +37,61 @@ export default function Header() {
               Features <ChevronDown size={"1rem"} />
 
               <ul
-                className="hidden group-hover:grid grid-cols-2 gap-4 list-none
-                  absolute top-full left-0 w-[480px] bg-white text-gray-800 shadow-lg p-2 rounded-xl"
+                className="hidden group-hover:grid grid-cols-2 gap-[10px] list-none
+                  absolute top-full left-0 w-[540px] bg-[#111827] shadow-lg p-[10px] rounded-xl"
               >
                 <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 text-white hover:text-[#111827] 
+                  py-3 px-5 rounded-md cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#advanced-validation'}
                 >
-                  <p className="font-semibold text-gray-900">Advanced Validation</p>
-                  <p className="text-sm text-gray-600">Multi-layer email accuracy check.</p>
+                  <p className="font-semibold ">Advanced Validation</p>
+                  <p className="text-sm text-gray-400">Multi-layer email accuracy check.</p>
                 </li>
 
                 <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
-                  onClick={() => window.location.href = '/#spam-trap-detection'}
-                >
-                  <p className="font-semibold text-gray-900">Spam Trap Detection</p>
-                  <p className="text-sm text-gray-600">Protect your sender reputation.</p>
-                </li>
-
-                <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
-                  onClick={() => window.location.href = '/#disposable-email-check'}
-                >
-                  <p className="font-semibold text-gray-900">Disposable Email Check</p>
-                  <p className="text-sm text-gray-600">Remove temporary email addresses.</p>
-                </li>
-
-                <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 text-white hover:text-[#111827] 
+                  py-3 px-5 rounded-md cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#catch-all-detection'}
                 >
-                  <p className="font-semibold text-gray-900">Catch-All Detection</p>
-                  <p className="text-sm text-gray-600">Identify risky catch-all domains.</p>
+                  <p className="font-semibold ">Catch-All Detection</p>
+                  <p className="text-sm text-gray-400">Identify risky catch-all domains.</p>
                 </li>
 
                 <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
-                  onClick={() => window.location.href = '/#real-time-api'}
+                  className="hover:bg-gray-100 text-white hover:text-[#111827]
+                   py-3 px-5 rounded-md cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#spam-trap-detection'}
                 >
-                  <p className="font-semibold text-gray-900">Real-Time API</p>
-                  <p className="text-sm text-gray-600">Verify emails instantly right inside your app.</p>
+                  <p className="font-semibold ">Spam Trap Detection</p>
+                  <p className="text-sm text-gray-400">Protect your sender reputation.</p>
                 </li>
 
                 <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
-                  onClick={() => window.location.href = '/#bulk-cleaning'}
+                  className="hover:bg-gray-100 text-white hover:text-[#111827]
+                   py-3 px-5 rounded-md cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#bulk-verification'}
                 >
-                  <p className="font-semibold text-gray-900">Bulk Verification</p>
-                  <p className="text-sm text-gray-600">Clean large lists in seconds.</p>
+                  <p className="font-semibold ">Bulk Verification</p>
+                  <p className="text-sm text-gray-400">Clean large lists in seconds.</p>
                 </li>
 
                 <li
-                  className="hover:bg-gray-100 p-3 rounded-lg cursor-pointer transition-colors"
+                  className="hover:bg-gray-100 text-white hover:text-[#111827] 
+                  py-3 px-5 rounded-md cursor-pointer transition-colors"
+                  onClick={() => window.location.href = '/#disposable-email-check'}
+                >
+                  <p className="font-semibold ">Disposable Email Check</p>
+                  <p className="text-sm text-gray-400">Remove temporary email addresses.</p>
+                </li>
+
+                <li
+                  className="hover:bg-gray-100 text-white hover:text-[#111827]
+                   py-3 px-5 rounded-md cursor-pointer transition-colors"
                   onClick={() => window.location.href = '/#role-based-filtering'}
                 >
-                  <p className="font-semibold text-gray-900">Role-Based Filtering</p>
-                  <p className="text-sm text-gray-600">Exclude generic addresses automatically.</p>
+                  <p className="font-semibold ">Role-Based Filtering</p>
+                  <p className="text-sm text-gray-400">Exclude generic addresses automatically.</p>
                 </li>
               </ul>
             </div>
