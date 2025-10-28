@@ -1,8 +1,8 @@
-import googleLogo from '/logos/google.png';
-import microsoftLogo from '/logos/microsoft.png';
-import slackLogo from '/logos/slack.png';
-import deepmindLogo from '/logos/deepmind.png';
-import zohoLogo from '/logos/zoho.png';
+import googleLogo from '/logos/google.webp';
+import microsoftLogo from '/logos/microsoft.webp';
+import slackLogo from '/logos/slack.webp';
+import deepmindLogo from '/logos/deepmind.webp';
+import zohoLogo from '/logos/zoho.webp';
 
 
 const logos = [
@@ -31,12 +31,12 @@ export default function LogoCloud() {
       <div className="relative w-full flex overflow-hidden py-4 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
         <div className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll group-hover:animation-pause">
           {logos.map((logo, index) => (
-            <img key={index} src={logo.src} alt={logo.alt} className="h-10 mx-8" />
+            <img key={index} src={logo.src} alt={logo.alt} className="h-10 mx-8" loading='lazy' />
           ))}
         </div>
         <div className="flex items-center justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll group-hover:animation-pause" aria-hidden="true">
           {logos.map((logo, index) => (
-            <img key={index + logos.length} src={logo.src} alt={logo.alt} className="h-10 mx-8" />
+            <img key={index + logos.length} src={logo.src} alt={logo.alt} className="h-10 mx-8" loading='lazy' />
           ))}
         </div>
       </div>

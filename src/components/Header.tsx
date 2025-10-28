@@ -33,16 +33,61 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <div className="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1 
-            py-3 cursor-default group relative">Features <ChevronDown size={"1rem"} />
-              <ul className='hidden group-hover:flex flex-col list-none
-              absolute top-full w-52 bg-gray-800 text-white p-1 rounded-md *:rounded-md *:py-2 *:px-3 *:cursor-pointer '>
-                <li className='hover:bg-gray-100 hover:text-gray-800' onClick={() => window.location.href = '/#advanced-validation'}>Global Coverage</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#spam-trap-detection'}>Detailed Analytics</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#gdpr-compliant'}>GDPR Compliant</li>
-                <li className='hover:bg-gray-100  hover:text-gray-800' onClick={() => window.location.href = '/#api-integration'}>API Integration</li>
-              </ul>
+  py-3 cursor-default group relative">
+              Features <ChevronDown size={"1rem"} />
 
+              <ul
+                className="hidden group-hover:grid grid-cols-2 gap-[10px] list-none
+      absolute top-full left-0 w-[540px] bg-[#111827] shadow-lg p-[10px] rounded-xl"
+              >
+                {[
+                  {
+                    title: "Advanced Validation",
+                    desc: "Multi-layer email accuracy check.",
+                    link: "/#advanced-validation",
+                  },
+                  {
+                    title: "Catch-All Detection",
+                    desc: "Identify risky catch-all domains.",
+                    link: "/#catch-all-detection",
+                  },
+                  {
+                    title: "Spam Trap Detection",
+                    desc: "Protect your sender reputation.",
+                    link: "/#spam-trap-detection",
+                  },
+                  {
+                    title: "Bulk Verification",
+                    desc: "Clean large lists in seconds.",
+                    link: "/#bulk-verification",
+                  },
+                  {
+                    title: "Disposable Email Check",
+                    desc: "Remove temporary email addresses.",
+                    link: "/#disposable-email-check",
+                  },
+                  {
+                    title: "Role-Based Filtering",
+                    desc: "Exclude generic addresses automatically.",
+                    link: "/#role-based-filtering",
+                  },
+                ].map((item) => (
+                  <li
+                    key={item.link}
+                    onClick={() => (window.location.href = item.link)}
+                    className="group/item hover:bg-gray-100 text-white hover:text-[#111827]
+          py-3 px-5 rounded-md cursor-pointer transition-colors"
+                  >
+                    <p className="font-semibold">{item.title}</p>
+                    <p className="text-sm text-gray-400 group-hover/item:text-gray-500 transition-colors">
+                      {item.desc}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
+
+
             <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
           </nav>
 
@@ -73,11 +118,15 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <a href="/#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
               <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="ghost" className="justify-start" asChild>
+              <div className="flex flex-col  space-y-2 pt-4">
+                <Button variant="ghost"
+                  className='border border-blue-500
+                  px-6 py-2  transition-colors duration-300 ease-in' asChild>
                   <a href="https://app.emailverifier.io/signin">Sign In</a>
                 </Button>
-                <Button className="justify-start" asChild>
+                <Button
+                  className='bg-gradient-to-r from-blue-500 to-blue-700 hover:bg-blue-600 text-white
+                  px-6 py-2  transition-colors duration-300 ease-in' asChild>
                   <a href="https://app.emailverifier.io/register">Get Started</a>
                 </Button>
               </div>

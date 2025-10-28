@@ -6,25 +6,25 @@ const processSteps = [
     number: '01',
     icon: FileUp,
     title: 'Upload Your List',
-    description: 'Upload your email list via our web interface, API, or integrate directly with your application.',
+    description: 'Drop in your file, connect your app, or use our API - whatever works for you.',
   },
   {
     number: '02',
     icon: ShieldCheck,
     title: 'Real-time Verification',
-    description: 'Our advanced algorithms verify each email through multiple validation layers instantly.',
+    description: 'We check every address using smart, multi-layer validation.',
   },
   {
     number: '03',
     icon: LineChart,
-    title: 'Get Results',
-    description: 'Receive detailed results with status codes, risk levels, and actionable insights.',
+    title: 'See Your Results',
+    description: 'Get a clear, detailed report with statuses, risks, and recommendations.',
   },
   {
     number: '04',
     icon: FileDown,
-    title: 'Download Clean List',
-    description: 'Export your verified, clean email list and improve your campaign performance.',
+    title: 'Download Your Clean List',
+    description: 'Export your verified list and send your next campaign with confidence.',
   },
 ];
 
@@ -35,10 +35,10 @@ const HowItWorks = () => {
         {/* Section Header */}
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How Email Verification Works
+            How it Works
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            Our simple 4-step process ensures maximum accuracy and efficiency for your email validation needs.
+            Our 4-step process keeps things simple, fast, and accurate.
           </p>
         </div>
 

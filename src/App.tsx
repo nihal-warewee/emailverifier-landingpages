@@ -13,6 +13,7 @@ import Testimonials from './components/Testimonials';
 import LogoCloud from './components/LogoCloud';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import OfferBanner from './components/OfferBanner';
 
 
 // Home page component
@@ -37,11 +38,12 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white flex flex-col">
+        <OfferBanner />
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path='/privacy-policy' element={<PrivacyPage />} />
-          <Route path='/terms' element={<TermsPage />} />
+          <Route path='/terms-of-service' element={<TermsPage />} />
         </Routes>
         <Footer />
       </div>

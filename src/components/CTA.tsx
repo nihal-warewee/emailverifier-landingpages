@@ -17,36 +17,33 @@ export default function CTA() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white">
           <h2 className="text-3xl lg:text-5xl font-semibold mb-5">
-            Ready to Improve Your <span className='text-blue-600'>Email Deliverability</span>
+            Ready to <span className='text-blue-600'>Clean Your List?</span>
           </h2>
-          <p className="text-xl text-blue-50 mb-12 max-w-3xl mx-auto">
-            Join thousands of businesses using Email Verifier to maintain clean email lists
-            and achieve better campaign results.
+          <p className="text-xl text-blue-50 mb-12 max-w-2xl mx-auto">
+            Join thousands of marketers keeping their email lists healthy and their messages reaching inboxes.
           </p>
 
-          <div className="flex flex-col gap-4 items-center *:w-full *:max-w-xs mb-10">
-            <Button size="sm" className="bg-gradient-to-r from-blue-700 to-blue-900 text-white hover:opacity-90  text-xl px-8 py-3
+          <div className="flex flex-col gap-4 items-center mb-10 ">
+            <Button size="xs" className="bg-gradient-to-r from-blue-700 to-blue-900
+             text-white hover:opacity-90  lg:text-xl px-8 py-3
             transition-opacity duration-300 ease-in font-normal" asChild>
               <a href="https://app.emailverifier.io/register">
-                Try It Free
+                Try It Free - 100 Verifications On Us
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-6 text-white">
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 mr-2" />
-              100 Free Verifications
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 mr-2" />
-              No Setup Required
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 mr-2" />
-              No Credit Card Required
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-3 text-white">
+            <span className='inline-flex items-center gap-2'>
+              <CheckCircle size={18} /> No setup
+            </span>
+            <span className='inline-flex items-center gap-2'>
+              <CheckCircle size={18} /> No credit card
+            </span>
+            <span className='inline-flex items-center gap-2 font-semibold'>
+              - Just results.
+            </span>
           </div>
         </div>
       </div>
