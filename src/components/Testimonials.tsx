@@ -62,6 +62,7 @@ export default function Testimonials() {
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full object-cover mr-4"
+                      loading='lazy'
                     />
                     <div className='leading-tight'>
                       <div className="font-semibold text-gray-900">{testimonial.name}</div>

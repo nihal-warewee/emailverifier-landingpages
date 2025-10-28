@@ -95,6 +95,7 @@ export default function Features() {
                   src={feature.card}
                   alt={feature.title}
                   className="w-full h-auto"
+                  loading='lazy'
                 />
               </div>
 

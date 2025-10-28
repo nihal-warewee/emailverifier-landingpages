@@ -1,14 +1,11 @@
-import { ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
-
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Hero() {
-
   return (
     <section className="relative overflow-hidden bg-white isolate">
       <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-2 items-center relative px-4 lg:px-10 2xl:px-44 py-10 xl:pb-20 xl:pt-10 2xl:py-24">
         {/* dotted background */}
-
         <div
           aria-hidden
           className="absolute inset-0 -z-10 pointer-events-none"
@@ -16,25 +13,56 @@ export default function Hero() {
             backgroundImage:
               "radial-gradient(circle, rgba(209,226,255,1) 2px, transparent 2px), linear-gradient(180deg, rgba(59,130,246,0.03), rgba(99,102,241,0.01))",
             backgroundSize: "50px 50px, 100% 100%",
-            backgroundPosition: "0 0, 0 0",
           }}
         />
+
         {/* LEFT: heading and CTAs */}
         <div className="flex-1">
           {/* top badges */}
           <div className="flex items-center gap-3">
-            <img src="/assets/productHunt.svg" alt="Product Hunt" className="h-8" />
-            <img src="/assets/trustPilot.svg" alt="Trustpilot" className="h-8" />
+            <img
+              src="/assets/productHunt.svg"
+              alt="Product Hunt"
+              className="h-8 w-auto"
+              width="32"
+              height="32"
+              loading="eager"
+              aria-hidden="true"
+            />
+            <img
+              src="/assets/trustPilot.svg"
+              alt="Trustpilot"
+              className="h-8 w-auto"
+              width="32"
+              height="32"
+              loading="eager"
+              aria-hidden="true"
+            />
           </div>
 
           {/* main heading */}
           <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mt-4">
-            <span className="inline-block mr-3 text-blue-600 align-middle relative">#1
-              <svg className='scale-75 lg:scale-100 absolute' width="59" height="8" viewBox="0 0 59 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.66382 6.88859C1.99342 6.76873 2.32302 6.64887 4.47793 6.01781C6.63284 5.38675 10.6031 4.24812 15.9893 3.36192C21.3756 2.47571 28.0575 1.87643 34.234 1.72502C40.4104 1.57361 45.8788 1.88824 49.6023 2.28253C53.3258 2.67683 55.1386 3.14127 56.2148 3.44046C57.291 3.73965 57.5756 3.8595 57.8689 4.02839" stroke="#FFE100" strokeWidth="2" strokeLinecap="round" />
+            <span className="inline-block mr-3 text-blue-600 align-middle relative" style={{ paddingBottom: 8 }}>
+              #1
+              <svg
+                className="absolute left-0 -bottom-1 w-[45px] lg:w-[59px]"
+                width="59"
+                height="8"
+                viewBox="0 0 59 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                style={{ display: "block" }}
+              >
+                <path
+                  d="M1.66382 6.88859C1.99342 6.76873 2.32302 6.64887 4.47793 6.01781C6.63284 5.38675 10.6031 4.24812 15.9893 3.36192C21.3756 2.47571 28.0575 1.87643 34.234 1.72502C40.4104 1.57361 45.8788 1.88824 49.6023 2.28253C53.3258 2.67683 55.1386 3.14127 56.2148 3.44046C57.291 3.73965 57.5756 3.8595 57.8689 4.02839"
+                  stroke="#FFE100"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
-
             </span>
+
             <span className="align-middle">Email Verification Tool</span>
           </h1>
 
@@ -47,8 +75,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Button
               size="lg"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-900 text-white
-              px-6 lg:px-16 py-3 hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-900 text-white px-6 lg:px-16 py-3 hover:shadow-xl transition-shadow duration-300 ease-in-out"
               asChild
             >
               <a href="https://app.emailverifier.io/register">
@@ -60,24 +87,64 @@ export default function Hero() {
 
           {/* micro-features row */}
           <div className="text-sm lg:text-md text-blue-800 mt-5">
-            Get<span className='font-semibold'>&nbsp;100 free verifications</span> - no setup, no credit card, no stress.
+            Get
+            <span className="font-semibold">&nbsp;100 free verifications</span> - no setup, no credit card, no stress.
           </div>
         </div>
 
         {/* RIGHT */}
         <div className="flex-1 flex justify-end max-w-lg 2xl:max-w-2xl">
-          <img src="assets/heroImage.webp" alt="hero image" loading='eager'/>
+          <img
+            src="assets/heroImage.webp"
+            alt="hero image"
+            loading="eager"
+            width="800"
+            height="600"
+            className="w-full h-auto max-w-[520px] 2xl:max-w-2xl object-contain"
+            
+          />
         </div>
       </div>
 
       {/* Brands row */}
-      <div className='my-10 border-t border-transparent'>
-        <p className='text-xl lg:text-2xl text-center font-semibold'>Leading Brands and Agencies Using emailverifier.io</p>
-        <div className="mt-6 flex justify-center items-center gap-10 flex-wrap *:aspect-auto *:w-36">
-          <img src="/logos/wareweeLogo.webp" alt="Warewe" />
-          <img src="/logos/redserpLogo.webp" alt="RedSorp" />
-          <img src="/logos/paperboatLogo.webp" alt="Paperbot AI" />
-          <img src="/logos/saasyogiLogo.webp" alt="SaaS Yogi" />
+      <div className="my-10 border-t border-transparent">
+        <p className="text-xl lg:text-2xl text-center font-semibold">
+          Leading Brands and Agencies Using emailverifier.io
+        </p>
+
+        <div className="mt-6 flex justify-center items-center gap-10 flex-wrap">
+          <img
+            src="/logos/wareweeLogo.webp"
+            alt="Warewe"
+            width="144"
+            height="48"
+            className="w-36 h-auto object-contain"
+            loading="lazy"
+          />
+          <img
+            src="/logos/redserpLogo.webp"
+            alt="RedSorp"
+            width="144"
+            height="48"
+            className="w-36 h-auto object-contain"
+            loading="lazy"
+          />
+          <img
+            src="/logos/paperboatLogo.webp"
+            alt="Paperbot AI"
+            width="144"
+            height="48"
+            className="w-36 h-auto object-contain"
+            loading="lazy"
+          />
+          <img
+            src="/logos/saasyogiLogo.webp"
+            alt="SaaS Yogi"
+            width="144"
+            height="48"
+            className="w-36 h-auto object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
