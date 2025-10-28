@@ -35,7 +35,7 @@ const HowItWorks = () => {
         {/* Section Header */}
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How Email Verification Works
+            How it Works
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
             Our 4-step process keeps things simple, fast, and accurate.

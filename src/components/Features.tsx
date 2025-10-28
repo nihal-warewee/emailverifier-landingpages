@@ -44,18 +44,18 @@ const features = [
   },
   {
     icon: Lock,
-    title: 'Bulk Cleaning',
+    title: 'Bulk Verification',
     description:
-      'Upload and clean thousands of emails fast.',
-    card: "/assets/featuresCard/FeatureCompliance.svg",
-    id: "bulk-cleaning"
+      'Upload and verify thousands of emails fast',
+    card: "/assets/featuresCard/FeatureBulk.svg",
+    id: "bulk-verification"
   },
   {
     icon: Lock,
     title: 'Role-Based Filtering',
     description:
       'Skip generic inboxes like info@ or sales@.',
-    card: "/assets/featuresCard/FeatureCompliance.svg",
+    card: "/assets/featuresCard/FeatureRole.svg",
     id: "role-based-filtering"
   },
   {
@@ -77,15 +77,16 @@ export default function Features() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Powerful Features That Just Work
           </h2>
+          <p className='lg:text-xl max-w-2xl mx-auto'>Everything you need to maintain a clean, high-quality email list and improve your delivery rates.</p>
         </div>
 
         {/* Features List */}
-        <div className="flex flex-col gap-16 lg:gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-16 lg:gap-6 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className={`flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-10 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
-                }`}
+              className={`flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-6
+                 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
               id={feature.id}
             >
 
@@ -108,7 +109,7 @@ export default function Features() {
                   <h4 className="text-2xl font-semibold text-gray-900 mb-3">
                     {feature.title}
                   </h4>
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <p className="text-gray-600 text-lg leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

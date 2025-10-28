@@ -131,10 +131,8 @@ export default function Pricing() {
               <TargetWithArrowSvg />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-800">Verification Credits</h3>
-              <p className="text-gray-900 text-sm leading-tight">
-                {formatNumber(volume)} verification credits that never expire.
-              </p>
+              <h3 className="lg:text-xl font-bold text-gray-800">{formatNumber(volume)} verification credits that never expire.</h3>
+
             </div>
           </div>
         </div>
@@ -145,7 +143,7 @@ export default function Pricing() {
             <p>Pay once, Use Forever</p>
             <p className="text-3xl font-bold text-gray-800 my-2">${price.usd}</p>
             {/* <p className="text-sm text-gray-500">≈ ₹{price.inr}</p> */}
-            <p className="text-sm text-gray-600 mt-1">that's just ${ratePerThousand} per 1,000 emails</p>
+            <p className="text-sm text-gray-600 mt-1">${ratePerThousand}0 per 1,000 emails</p>
           </div>
 
           <p className="text-lg font-medium text-black mb-3 inline-flex gap-2 items-center">

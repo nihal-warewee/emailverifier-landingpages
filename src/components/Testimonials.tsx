@@ -35,7 +35,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-2xl lg:text-3xl font-bold text-black mb-4">
-            Trusted by Thousands of Businesses
+            Loved by Thousands of Businesses
           </h2>
           <p className="text-xl text-black max-w-3xl mx-auto">
             See what our customers have to say about their experience with Email Verifier.

@@ -9,7 +9,7 @@ export default function OfferBanner() {
     });
 
     // target date/time here, Example target (12 PM, Oct 28, 2025)
-    const targetDate = useMemo(() => new Date("2025-10-28T12:00:00"), []);
+    const targetDate = useMemo(() => new Date("2025-10-30T10:19:00"), []);
 
     useEffect(() => {
         const timer = setInterval(() => {
