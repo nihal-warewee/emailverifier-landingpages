@@ -6,7 +6,7 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-white isolate">
-      <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-2 items-center relative px-4 lg:px-10 2xl:px-44 py-10 xl:py-20 2xl:py-24">
+      <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-2 items-center relative px-4 lg:px-10 2xl:px-44 py-14 2xl:py-24">
         {/* dotted background */}
 
         <div

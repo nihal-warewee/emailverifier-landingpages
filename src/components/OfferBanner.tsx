@@ -1,15 +1,20 @@
 import { useEffect, useState, useMemo } from "react";
 
+
+
+
 export default function OfferBanner() {
-    const [visible, setVisible] = useState(true);
+    // target date/time here, Example target (12 PM, Oct 28, 2025)
+    const targetDate = useMemo(() => new Date("2025-11-7T12:48:00"), []);
+
+    const [visible, setVisible] = useState(() => Date.now() < targetDate.getTime());
     const [timeLeft, setTimeLeft] = useState({
         hours: 0,
         minutes: 0,
         seconds: 0,
     });
 
-    // target date/time here, Example target (12 PM, Oct 28, 2025)
-    const targetDate = useMemo(() => new Date("2025-10-30T10:19:00"), []);
+
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -18,9 +23,11 @@ export default function OfferBanner() {
 
             if (difference <= 0) {
                 clearInterval(timer);
+                setVisible(false);
                 setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
                 return;
             }
+
 
             const totalSeconds = Math.floor(difference / 1000);
             const hours = Math.floor(totalSeconds / 3600);
@@ -36,7 +43,7 @@ export default function OfferBanner() {
     if (!visible) return null;
 
     return (
-        <div
+        <div role="alert"
             className={`w-full bg-gradient-to-b from-[#7AA1EE] to-[#5105FF]
       text-white text-sm sm:text-md xl:text-xl
        flex flex-col lg:flex-row justify-center items-center py-4 pr-6 px-2 lg:px-6 gap-3 xl:gap-10
