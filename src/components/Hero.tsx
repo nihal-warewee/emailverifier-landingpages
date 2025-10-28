@@ -60,7 +60,7 @@ export default function Hero() {
 
           {/* micro-features row */}
           <div className="text-sm lg:text-md text-blue-800 mt-5">
-            Get<span className='font-medium'>&nbsp;100 free verifications</span> - no setup, no credit card, no stress.
+            Get<span className='font-semibold'>&nbsp;100 free verifications</span> - no setup, no credit card, no stress.
           </div>
         </div>
 
