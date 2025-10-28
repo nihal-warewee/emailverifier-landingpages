@@ -5,7 +5,7 @@ import { useEffect, useState, useMemo } from "react";
 
 export default function OfferBanner() {
     // target date/time here, Example target (12 PM, Nov 05, 2025)
-    const targetDate = useMemo(() => new Date("2025-11-05T12:55:00"), []);
+    const targetDate = useMemo(() => new Date("2025-11-07T12:55:00"), []);
 
     const [visible, setVisible] = useState(() => Date.now() < targetDate.getTime());
     const [timeLeft, setTimeLeft] = useState({
