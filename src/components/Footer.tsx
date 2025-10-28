@@ -102,7 +102,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-center text-slate-600 text-md py-6 border-t">
+        <p className="text-center lg:text-right text-slate-600 text-md py-4 lg:py-6 border-t">
           ©2025 EmailVerifier.io, All rights reserved
         </p>
       </div>
