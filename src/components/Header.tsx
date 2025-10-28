@@ -118,11 +118,15 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <a href="/#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
               <a href="/#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="ghost" className="justify-start" asChild>
+              <div className="flex flex-col  space-y-2 pt-4">
+                <Button variant="ghost"
+                  className='border border-blue-500
+                  px-6 py-2  transition-colors duration-300 ease-in' asChild>
                   <a href="https://app.emailverifier.io/signin">Sign In</a>
                 </Button>
-                <Button className="justify-start" asChild>
+                <Button
+                  className='bg-gradient-to-r from-blue-500 to-blue-700 hover:bg-blue-600 text-white
+                  px-6 py-2  transition-colors duration-300 ease-in' asChild>
                   <a href="https://app.emailverifier.io/register">Get Started</a>
                 </Button>
               </div>
