@@ -1,0 +1,36 @@
+import Hero from "@/Components/Hero";
+import LogoCloud from "@/Components/LogoCloud";
+import Features from "@/Components/Features";
+import HowItWorks from "@/Components/HowItWorks";
+import Testimonials from "@/Components/Testimonials";
+import Pricing from "@/Components/Pricing";
+import CTA from "@/Components/CTA";
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <LogoCloud />
+      <Features />
+      <HowItWorks />
+      <Testimonials />
+      <Pricing />
+      <CTA />
+    </>
+  );
+}
+            Deploy Now
+          </a>
+          <a
+            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Documentation
+          </a>
+        </div>
+      </main>
+    </div>
+  );
+}
