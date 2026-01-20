@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     title: "Email Verifier: Free, Bulk & API Email Validation",
     description: "Reduce bounce rates by up to 98% with our advanced email validation service. 99.9% accuracy guaranteed.",
     images: ["https://emailverifier.io/og-image.jpg"],
+    site: "@emailverifier",
   },
 };
 

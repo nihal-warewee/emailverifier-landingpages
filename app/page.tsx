@@ -8,14 +8,14 @@ import CTA from "@/Components/CTA";
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen" id="main-page" role="main">
       <Hero />
-      <LogoCloud />
-      <Features />
       <HowItWorks />
-      <Testimonials />
+      <Features />
       <Pricing />
+      <LogoCloud />
+      <Testimonials />
       <CTA />
-    </>
+    </main>
   );
 }
